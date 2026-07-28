@@ -29,6 +29,8 @@ Intent
     ↓
 Interpretation
     ↓
+Engineering State
+    ↓
 Execution
     ↓
 JES Artifacts
@@ -78,7 +80,25 @@ Interpretation answers:
    - proceed to execution, or
    - pause and ask targeted clarification questions.
 
-## 3) Execution
+## 3) Engineering State
+
+Before execution, Cursor consolidates interpretation into an explicit engineering state.
+
+This state is the operational context object for the current cycle. It is used to preserve consistency across pause/continue/delegate/review transitions.
+
+### State Fields
+
+- Current Intent
+- Current Scope
+- Relevant Workflow
+- Applicable Rules
+- Required Artifacts
+- Open Questions
+- Execution Status
+
+If state fields are incomplete or contradictory, Cursor must stop and resolve gaps before execution.
+
+## 4) Execution
 
 Execution can start only when interpretation has produced sufficient context.
 
@@ -103,9 +123,11 @@ During execution, Cursor must:
 - halt for approval when a change crosses architectural boundaries,
 - align with JES workflow validation expectations.
 
-## 4) Output: JES Artifacts
+## 5) Output: JES Artifacts
 
 Cursor does not return "just code." Output is an artifact set aligned with JES workflow closure.
+
+Artifacts are determined by the selected workflow and engineering operation, not by Cursor itself.
 
 Typical artifact sequence:
 
@@ -121,22 +143,27 @@ Execution summary
 Required documentation updates
 ```
 
-The exact set depends on task type and cycle depth (full cycle or minimum cycle as defined in `docs/03_WORKFLOW.md`).
+The exact set depends on operation and cycle depth (full cycle or minimum cycle as defined in `docs/03_WORKFLOW.md`).
 
-## Task-Type Mapping (Operational)
+## Engineering Operations
 
-This model defines operations at engineering level; Cursor-specific syntax is secondary.
+Engineering operations are JES-level concepts. Cursor implements them; it does not define them.
+
+Reference: `../ENGINEERING_OPERATIONS.md`
 
 Initial operation set:
 
 - Research
+- Analyze
+- Plan
 - Implement
 - Review
+- Validate
 - Refactor
 - Document
 - Explain
 
-Each operation should map to one prompt in `prompts/` and one command entry in `commands/`.
+One operation may be implemented by one or more prompts depending on integration needs.
 
 ## Decision Gates
 
@@ -152,8 +179,9 @@ Cursor must stop and ask before proceeding when any of the following is true:
 
 - `FOUNDATION.md` defines non-negotiable baseline behavior.
 - `OPERATING_MODEL.md` defines runtime translation from intent to action.
+- `../ENGINEERING_OPERATIONS.md` defines the shared JES operation set.
 - `rules/` constrain specific Cursor behavior.
-- `prompts/` implement one operation each.
+- `prompts/` implement operation behavior (one-to-many mapping allowed).
 - `commands/` trigger operations.
 - `skills/` and `subagents/` provide reusable specialization.
 

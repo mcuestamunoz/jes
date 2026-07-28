@@ -9,6 +9,10 @@ The integration translates JES methodology into Cursor-compatible operational ar
 JES defines the methodology.  
 This integration adapts it to Cursor.
 
+Shared engineering operations are defined in:
+
+- `../ENGINEERING_OPERATIONS.md`
+
 ## Structure
 
 ```text
