@@ -22,16 +22,19 @@ Tools may change over time.
 
 JES should not.
 
-```
+```text
 Engineer
-      │
-      ▼
-     JES
-      │
-      ▼
+    |
+    v
+JES Core
+    |
+    v
+Engineering Operations
+    |
+    v
 Integration Layer
-      │
-      ▼
+    |
+    v
 External Tool
 ```
 
@@ -41,11 +44,34 @@ External Tool
 
 Every external tool communicates with JES through an integration layer.
 
-An integration translates JES concepts into the capabilities of a specific tool.
+An integration implements JES in the capabilities of a specific tool.
 
 The integration layer must never become the source of engineering knowledge.
 
 Its only responsibility is to expose JES to the tool.
+
+---
+
+## Operational Translation Model
+
+Integrations must translate engineer requests using the JES operation model:
+
+```text
+Intent
+   ->
+Operation Selection
+   ->
+Engineering Operation
+   ->
+Tool-specific Execution
+```
+
+Where:
+
+- `Intent` is defined by the Engineer.
+- `Operation Selection` is performed by the integration operating model.
+- `Engineering Operation` is defined by JES core.
+- `Tool-specific Execution` is performed by the selected tool/runtime.
 
 ---
 
@@ -63,6 +89,10 @@ Specifically:
 - Templates
 
 External integrations must reference these documents instead of duplicating them.
+
+Canonical operation source:
+
+- `docs/08_ENGINEERING_OPERATIONS.md`
 
 ---
 
@@ -91,6 +121,10 @@ They should describe:
 - when to use it
 
 They should not redefine engineering concepts.
+
+Tool-specific artifacts are allowed only as implementation details (for example: `FOUNDATION.md`, `OPERATING_MODEL.md`, `commands/`, `prompts/`, `skills/`, `subagents/`).
+
+Those artifacts implement JES for one tool; they do not define JES.
 
 ---
 
@@ -137,6 +171,7 @@ Responsible for:
 - documentation
 - workflows
 - engineering rules
+- engineering operations
 - templates
 
 ---
@@ -145,10 +180,11 @@ Responsible for:
 
 Responsible for:
 
-- adapting JES to a specific tool
+- implementing JES for a specific tool
 - exposing documentation
-- configuring tool behaviour
-- mapping workflows into tool capabilities
+- configuring tool behavior
+- selecting operations from intent
+- mapping operations/workflow constraints into tool capabilities
 
 ---
 
@@ -164,30 +200,23 @@ Responsible for:
 
 ---
 
-# Cursor Example
+# Cursor Example (Implementation-Level)
 
-```
+```text
 Cursor
 
-↓
+  ->
+Reads JES core context
 
-Cursor Rule
+  ->
+Selects operation from intent
 
-↓
+  ->
+Applies tool-specific prompts/commands
 
-Read:
+  ->
+Executes and returns JES-aligned artifacts
 
-SYSTEM_DEFINITION.md
-
-↓
-
-Read:
-
-Engineering Rules
-
-↓
-
-Execute Task
 ```
 
 Cursor never becomes the owner of engineering knowledge.
@@ -219,6 +248,18 @@ JES owns engineering knowledge.
 Integrations expose that knowledge.
 
 Tools execute it.
+
+Dependency direction is one-way:
+
+```text
+JES Core
+   ->
+Engineering Operations
+   ->
+Integration
+   ->
+Tool
+```
 
 This separation guarantees:
 

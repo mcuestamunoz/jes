@@ -139,23 +139,23 @@ JES can exist without JARVIS. JARVIS can be developed without JES. Together, the
 ## 8. Workflow under JES
 
 ```text
-JES
+JES Core
   |
   +-- Knowledge
   +-- Workflows
   +-- Rules
+  +-- Engineering Operations
            |
            v
-    Context Builder
+    Integration Layer
            |
            v
-     Prompt Builder
+      Tool Runtime
            |
            v
-         Cursor
-           |
-           v
-    Implementation
+     Implementation
 ```
 
-*Version: 2026.1 — Updated: July 2026*
+Tools are replaceable execution environments. No specific tool is required by JES.
+
+*Version: 2026.2 — Updated: July 2026*
