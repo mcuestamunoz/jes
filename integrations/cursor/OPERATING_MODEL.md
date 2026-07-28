@@ -149,7 +149,7 @@ The exact set depends on operation and cycle depth (full cycle or minimum cycle 
 
 Engineering operations are JES-level concepts. Cursor implements them; it does not define them.
 
-Reference: `../ENGINEERING_OPERATIONS.md`
+Reference: `../../docs/08_ENGINEERING_OPERATIONS.md`
 
 Initial operation set:
 
@@ -179,7 +179,7 @@ Cursor must stop and ask before proceeding when any of the following is true:
 
 - `FOUNDATION.md` defines non-negotiable baseline behavior.
 - `OPERATING_MODEL.md` defines runtime translation from intent to action.
-- `../ENGINEERING_OPERATIONS.md` defines the shared JES operation set.
+- `../../docs/08_ENGINEERING_OPERATIONS.md` defines the shared JES operation set.
 - `rules/` constrain specific Cursor behavior.
 - `prompts/` implement operation behavior (one-to-many mapping allowed).
 - `commands/` trigger operations.

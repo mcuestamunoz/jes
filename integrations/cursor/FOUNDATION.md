@@ -46,5 +46,6 @@ Core documents:
 - `docs/05_RULES.md`
 - `docs/06_INTEGRATIONS.md`
 - `docs/07_ECOSYSTEM.md`
+- `docs/08_ENGINEERING_OPERATIONS.md`
 
 Repository documentation is the source of truth.

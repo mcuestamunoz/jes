@@ -161,11 +161,16 @@ El ecosistema no crece por anticipación. Crece por necesidad demostrada *(R-GRW
 
 ## Relación con las integraciones
 
+`08_ENGINEERING_OPERATIONS.md` define el catálogo común de operaciones de ingeniería de JES.
+
 `06_INTEGRATIONS.md` describe la arquitectura de la Integration Layer: cómo se diseñan los adaptadores, qué pueden y no pueden hacer, y cómo se relacionan con JES.
 
 `07_ECOSYSTEM.md` (este documento) responde a una pregunta anterior: qué capacidades necesita JES y qué herramientas las cubren.
 
 ```
+08_ENGINEERING_OPERATIONS.md ← qué operaciones comunes existen
+        │
+        ▼
 07_ECOSYSTEM.md   ← qué capacidades y qué herramientas
         │
         ▼

@@ -59,6 +59,7 @@ Specifically:
 - Documentation
 - Engineering Rules
 - Workflows
+- Engineering Operations
 - Templates
 
 External integrations must reference these documents instead of duplicating them.

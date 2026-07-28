@@ -11,7 +11,7 @@ This integration adapts it to Cursor.
 
 Shared engineering operations are defined in:
 
-- `../ENGINEERING_OPERATIONS.md`
+- `../../docs/08_ENGINEERING_OPERATIONS.md`
 
 ## Structure
 

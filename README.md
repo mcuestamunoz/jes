@@ -12,6 +12,7 @@ A tool-independent engineering methodology for human–AI collaborative software
 - **Workflow** — how engineering cycles are executed
 - **Rules** — the constraints that apply within those cycles
 - **Ecosystem** — the capabilities required and how tools provide them
+- **Engineering Operations** — tool-agnostic units of engineering work
 
 ---
 
