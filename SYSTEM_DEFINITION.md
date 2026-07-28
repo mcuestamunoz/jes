@@ -1,180 +1,161 @@
 # JES — System Definition
 
-> Este es el documento más importante del JARVIS Engineering System.  
-> Todo lo demás (arquitectura, workflows, reglas, automatizaciones) debe derivar de él.  
-> Si algo no encaja aquí, no pertenece a JES.
+> This is the most important document in the JARVIS Engineering System.  
+> Everything else (architecture, workflows, rules, automations) must derive from it.  
+> If something does not fit here, it does not belong to JES.
 >
-> Este documento define **qué es JES**. `01_PRINCIPLES.md` define **cómo piensa**. Ambos forman juntos la capa raíz del sistema.
+> This document defines **what JES is**. `docs/01_PRINCIPLES.md` defines **how JES reasons**. Together they form the root layer of the system.
 
 ---
 
-## 1. Qué es JES
+## 1. What JES is
 
-El JARVIS Engineering System (JES) es un sistema de ingeniería diseñado para organizar, coordinar y gobernar el desarrollo de proyectos complejos mediante la colaboración estructurada entre un ingeniero y múltiples agentes de inteligencia artificial.
+The JARVIS Engineering System (JES) is an engineering system designed to organize, coordinate, and govern the development of complex projects through structured collaboration between an engineer and multiple AI agents.
 
-JARVIS es el principal proyecto desarrollado bajo JES, pero no el único.
+JARVIS is the main project developed under JES, but not the only one.
 
-No es un conjunto de herramientas.  
-No es una metodología teórica.  
-No es documentación pasiva.
+It is not a set of tools.  
+It is not a theoretical methodology.  
+It is not passive documentation.
 
-JES no desarrolla software.
+JES does not develop software.
 
-JES desarrolla la forma en la que el software es desarrollado.
+JES develops the way software is developed.
 
-Es un sistema con responsabilidades activas que gobierna cómo se toman decisiones, cómo se coordina el trabajo entre el ingeniero y los agentes de IA, y cómo se preserva el conocimiento del proyecto a lo largo del tiempo.
+It is a system with active responsibilities that governs how decisions are made, how work is coordinated between the engineer and AI agents, and how project knowledge is preserved over time.
 
-JES existe porque construir sistemas complejos con IA como colaborador requiere más que buenas intenciones. Requiere estructura.
+JES exists because building complex systems with AI as a collaborator requires more than good intentions. It requires structure.
 
 ---
 
-## 2. Qué problemas resuelve
+## 2. Problems JES solves
 
-| Problema | Cómo lo resuelve JES |
+| Problem | How JES solves it |
 |---|---|
-| Las decisiones se toman sin registro ni justificación | Documenta y versiona cada decisión arquitectónica |
-| El contexto se pierde entre sesiones | Define reglas de contexto explícito para los agentes |
-| La IA asume autoridad que no le corresponde | Establece límites claros entre delegación e implementación |
-| El conocimiento queda en conversaciones privadas | Todo conocimiento vive en el repositorio |
-| La calidad depende del estado del ingeniero | Define procesos reproducibles independientes del estado |
-| Las herramientas condicionan la arquitectura | Separa metodología de implementación |
+| Decisions are made without record or justification | Documents and versions every architectural decision |
+| Context is lost between sessions | Defines explicit context rules for agents |
+| AI assumes authority it should not have | Establishes clear boundaries between delegation and decision authority |
+| Knowledge remains in private conversations | Requires that important knowledge lives in the repository |
+| Quality depends on the engineer’s current state | Defines reproducible processes independent of mood/state |
+| Tools condition architecture | Separates methodology from implementation |
 
 ---
 
-## 3. Responsabilidades
+## 3. Responsibilities
 
-JES existe para:
+JES exists to:
 
-- ✓ **Organizar la ingeniería** — dar estructura al proceso de desarrollo
-- ✓ **Mantener el contexto** — garantizar que los agentes operan con información correcta y completa
-- ✓ **Coordinar las IA** — definir roles, alcances y límites de cada agente
-- ✓ **Preservar el conocimiento** — todo lo que importa vive en el repositorio
-- ✓ **Automatizar tareas repetitivas** — eliminar fricción en el ciclo de ingeniería
-- ✓ **Garantizar la calidad** — todo cambio es reproducible, verificable y trazable
-- ✓ **Mantener al ingeniero como autoridad absoluta** — ninguna decisión estratégica se delega
-- ✓ **Facilitar la toma de decisiones de ingeniería** — proporcionar al ingeniero la información y el contexto necesarios para tomar decisiones informadas
-
----
-
-## 4. Límites
-
-JES **nunca debe**:
-
-- ✗ Tomar decisiones estratégicas de forma autónoma
-- ✗ Modificar arquitectura sin aprobación explícita del ingeniero
-- ✗ Hacer merge, deploy o cambios irreversibles automáticamente
-- ✗ Ocultar decisiones o razonamientos
-- ✗ Generar conocimiento que no quede documentado en el repositorio
-- ✗ Condicionar la arquitectura del software a una herramienta concreta
-- ✗ Crecer en complejidad sin justificación clara de valor
-- ✗ Sustituir el criterio del ingeniero
+- Organize engineering
+- Preserve context
+- Coordinate AI agents
+- Preserve knowledge
+- Automate repetitive tasks
+- Guarantee quality
+- Keep the engineer as final authority
+- Support informed engineering decisions
 
 ---
 
-## 5. Principios
+## 4. Boundaries
 
-Estos principios gobiernan todas las decisiones dentro de JES.
+JES must never:
 
-**P0 — Engineering First**
-JES existe para mejorar la ingeniería, no para demostrar capacidades de inteligencia artificial.
+- Make autonomous strategic decisions
+- Modify architecture without explicit engineer approval
+- Merge, deploy, or execute irreversible changes automatically
+- Hide decisions or reasoning
+- Generate important knowledge that is not documented in the repository
+- Bind software architecture to a specific tool
+- Grow in complexity without clear value
+- Replace engineer judgment
 
-Toda decisión dentro del sistema debe justificarse por el valor que aporta al proceso de ingeniería.
+---
+
+## 5. Principles
+
+These principles govern all decisions inside JES.
+
+**P0 — Engineering First**  
+JES exists to improve engineering, not to demonstrate AI capabilities.
 
 **P1 — Human Authority**  
-La autoridad técnica nunca se delega. Los agentes proponen, implementan, analizan y revisan. La decisión final pertenece siempre al ingeniero.
+Technical authority is never delegated. Agents can propose, implement, analyze, and review. Final decisions always belong to the engineer.
 
 **P2 — AI as Collaborator**  
-La implementación puede delegarse. El diseño, no.
+Implementation can be delegated. Design authority cannot.
 
 **P3 — Repository First**  
-Todo conocimiento vive en el repositorio. No se aceptan dependencias de conversaciones, memoria personal o contexto externo.
+All relevant knowledge lives in the repository.
 
 **P4 — Documentation as Engineering**  
-La documentación forma parte del sistema, no es una tarea posterior.
+Documentation is part of the system, not post-work.
 
 **P5 — Deterministic Engineering**  
-Todo cambio debe ser reproducible, verificable y trazable.
+Every change must be reproducible, verifiable, and traceable.
 
 **P6 — Replaceable Tools**  
-Las herramientas son intercambiables. La arquitectura del sistema nunca depende de un proveedor concreto.
+Tools are replaceable. System architecture must never depend on one vendor/tool.
 
 **P7 — Context over Memory**  
-Los agentes trabajan con contexto explícito. Nunca se asume que recuerdan conversaciones anteriores.
+Agents work from explicit context. They must not rely on conversation memory.
 
 **P8 — Continuous Validation**  
-No existe implementación sin verificación. Todo cambio finaliza con validación.
+No implementation is complete without validation.
 
 **P9 — Simplicity by Default**  
-Cada componente añadido incrementa la complejidad. Toda nueva herramienta, dependencia o abstracción debe justificar el valor que aporta.
+Every added component increases complexity and must justify its value.
 
 ---
 
-## 6. Criterio de pertenencia
+## 6. Belonging criterion
 
-Antes de añadir cualquier cosa a JES, la pregunta es:
+Before adding anything to JES, ask:
 
-> **¿Cumple alguna de las responsabilidades definidas en la sección 3?**
+> **Does it fulfill at least one responsibility defined in section 3?**
 
-Si sí → pertenece a JES.  
-Si no → no entra en JES.
-
-Este criterio es la única regla de incorporación que necesitamos.
+If yes, it belongs.  
+If no, it does not.
 
 ---
 
-## 7. Relación con JARVIS
+## 7. Relationship with JARVIS
 
-JES y JARVIS son dos sistemas separados con una relación unidireccional:
+JES and JARVIS are separate systems with a one-way relationship:
 
-```
+```text
 JES (Engineering System)
-        │
-        │ desarrolla
-        ▼
-  JARVIS (Software Product)
+        |
+        | develops
+        v
+JARVIS (Software Product)
 ```
 
-JARVIS referencia JES mediante una línea en su documentación (`docs/engineering.md`).  
-No existe dependencia técnica entre ambos.  
-JES puede aplicarse a cualquier proyecto; no es exclusivo de JARVIS.
+JARVIS references JES in its documentation, but there is no technical dependency.
 
-JES puede existir sin JARVIS. JARVIS puede desarrollarse sin JES. Sin embargo, la combinación de ambos constituye el entorno de ingeniería recomendado para proyectos complejos.
+JES can exist without JARVIS. JARVIS can be developed without JES. Together, they form a strong engineering environment for complex projects.
 
 ---
 
-## 8. Flujo de trabajo bajo JES
+## 8. Workflow under JES
 
-                    JES
+```text
+JES Core
+  |
+  +-- Knowledge
+  +-- Workflows
+  +-- Rules
+  +-- Engineering Operations
+           |
+           v
+    Integration Layer
+           |
+           v
+      Tool Runtime
+           |
+           v
+     Implementation
+```
 
-             (Coordina ingeniería)
+Tools are replaceable execution environments. No specific tool is required by JES.
 
-                     │
-
-      ┌──────────────┼──────────────┐
-
-      ▼              ▼              ▼
-
- Knowledge      Workflows       Rules
-
-      │              │              │
-
-      └──────────────┼──────────────┘
-
-                     ▼
-
-          Context Builder
-
-                     ▼
-
-           Prompt Builder
-
-                     ▼
-
-                Cursor
-
-                     ▼
-
-             Implementación
-
-
-*Versión: 2026.1 — Actualizado: julio 2026*
+*Version: 2026.2 — Updated: July 2026*

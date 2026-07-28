@@ -12,6 +12,7 @@ A tool-independent engineering methodology for human–AI collaborative software
 - **Workflow** — how engineering cycles are executed
 - **Rules** — the constraints that apply within those cycles
 - **Ecosystem** — the capabilities required and how tools provide them
+- **Engineering Operations** — tool-agnostic units of engineering work
 
 ---
 
@@ -30,7 +31,7 @@ Projects that adopt JES declare the version they use:
 engineering:
   methodology:
     name: JES
-    version: "1.0"
+    version: "1.1"
 ```
 
 The methodology remains independent of any specific project.  
@@ -40,8 +41,10 @@ Projects consume JES. They do not contain it.
 
 ## Version
 
-Current: **v1.0** — Foundational specification  
-Status: Complete
+Current: **v1.1** — Integration architecture refinement  
+Status: Stable core
+
+See `CHANGELOG.md` for release notes.
 
 ---
 
