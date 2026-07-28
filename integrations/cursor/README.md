@@ -14,6 +14,7 @@ This integration adapts it to Cursor.
 ```text
 cursor/
 ├── FOUNDATION.md
+├── OPERATING_MODEL.md
 ├── README.md
 ├── rules/
 ├── prompts/
@@ -25,6 +26,7 @@ cursor/
 ## Components
 
 - `FOUNDATION.md`: baseline operational contract between JES and Cursor.
+- `OPERATING_MODEL.md`: translation model from engineering intent to JES-aligned execution and artifacts.
 - `rules/`: Cursor-specific constraints derived from JES.
 - `prompts/`: prompts that implement the contract and rules.
 - `commands/`: operational command definitions.
