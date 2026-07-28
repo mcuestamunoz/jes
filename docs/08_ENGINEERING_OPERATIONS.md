@@ -1,51 +1,45 @@
 # JES — Engineering Operations
 
-> Este documento define las operaciones de ingeniería reconocidas por JES.  
-> Una operación no es un comando de herramienta. Es una unidad metodológica de trabajo que cualquier integración debe poder ejecutar.  
-> Si una operación debe existir igual en Cursor, Claude Code o ChatGPT, pertenece a JES.
+> This document defines the engineering operations recognized by JES.  
+> An operation is not a tool command. It is a methodology-level unit of work.
 
 ---
 
-## Qué es una operación de ingeniería
+## What an engineering operation is
 
-Una **Engineering Operation** responde a la pregunta:
+An operation answers:
 
-> *¿Qué tipo de trabajo de ingeniería se está realizando en este ciclo?*
+> *What kind of engineering work is being executed in this cycle?*
 
-No define sintaxis de prompts, ni comandos concretos, ni detalles de una herramienta.
-
-Define una interfaz estable entre:
-
-- la metodología JES (`03_WORKFLOW.md`, `05_RULES.md`),
-- los modelos operativos de integración,
-- y la implementación concreta en cada herramienta.
+Operations provide a stable interface between:
+- JES workflow/rules,
+- integration operating models,
+- tool-specific implementations.
 
 ---
 
-## Posición arquitectónica
+## Architectural placement
 
-Las operaciones pertenecen al núcleo metodológico de JES, no a una integración.
+Operations belong to JES core, not to any specific integration.
 
 ```text
 JES Core
-    │
-    ├── Principles
-    ├── Rules
-    ├── Workflow
-    └── Engineering Operations
-            │
-            ▼
-      Integration Layer
-            │
-            ▼
+  |
+  +-- Principles
+  +-- Rules
+  +-- Workflow
+  +-- Engineering Operations
+           |
+           v
+     Integration Layer
+           |
+           v
        Tool Runtime
 ```
 
-Las integraciones implementan operaciones. No las inventan.
-
 ---
 
-## Conjunto de operaciones (v1)
+## Operation set (v1)
 
 - Research
 - Analyze
@@ -59,143 +53,89 @@ Las integraciones implementan operaciones. No las inventan.
 
 ---
 
-## Definición de operaciones
+## Operation definitions
 
 ### Research
-
-**Objetivo:** recopilar y organizar contexto relevante antes de decidir implementación.
-
-**Salidas típicas:**
-- resumen de hallazgos
-- referencias a módulos/archivos afectados
-- incógnitas y riesgos identificados
+Gather and structure context before solution decisions.
 
 ### Analyze
-
-**Objetivo:** evaluar impacto, restricciones y alternativas para un intent definido.
-
-**Salidas típicas:**
-- análisis de alcance
-- análisis de tradeoffs
-- opciones recomendadas para decisión del Engineer
+Evaluate scope, constraints, risks, and alternatives.
 
 ### Plan
-
-**Objetivo:** convertir una dirección aprobada en tareas verificables.
-
-**Salidas típicas:**
-- lista ordenada de tareas
-- criterios de aceptación/verificación
-- artefactos esperados por tarea
+Transform approved direction into verifiable execution tasks.
 
 ### Implement
-
-**Objetivo:** ejecutar el plan aprobado dentro del alcance definido.
-
-**Salidas típicas:**
-- cambios de código/configuración
-- tests/checks asociados
-- notas de implementación
+Execute approved plan within defined scope.
 
 ### Review
-
-**Objetivo:** evaluar corrección, calidad y alineación con arquitectura/reglas.
-
-**Salidas típicas:**
-- hallazgos priorizados por severidad
-- notas de riesgo/regresión
-- propuestas de corrección
+Assess quality, correctness, and architectural consistency.
 
 ### Validate
-
-**Objetivo:** verificar que la implementación cumple criterios técnicos y de workflow.
-
-**Salidas típicas:**
-- evidencia de validación (tests/checks/resultados)
-- estado pass/fail con justificación
-- brechas de validación pendientes
+Verify technical and workflow acceptance criteria.
 
 ### Document
-
-**Objetivo:** actualizar el conocimiento del repositorio para reflejar el estado aprobado.
-
-**Salidas típicas:**
-- documentación/especificaciones actualizadas
-- nota explícita de artefactos impactados
-- verificación de completitud documental
+Update repository truth to match approved system state.
 
 ### Explain
-
-**Objetivo:** comunicar razonamiento, comportamiento e impacto de un cambio.
-
-**Salidas típicas:**
-- explicación concisa de qué cambió y por qué
-- resumen de impacto
-- consideraciones de seguimiento
+Communicate rationale, behavior, and impact clearly.
 
 ### Refactor
-
-**Objetivo:** mejorar estructura interna sin alterar comportamiento externo esperado.
-
-**Salidas típicas:**
-- mejoras estructurales del código
-- evidencia de preservación de comportamiento
-- cambios sobre deuda técnica identificada
+Improve internal structure while preserving intended behavior.
 
 ---
 
-## Selección de operación (Operation Selection)
+## Operation selection
 
-Entre el Intent y la ejecución existe una traducción obligatoria:
+Between intent and execution, operation selection is required:
 
 ```text
 Intent
-  ↓
+  ->
 Operation Selection
-  ↓
+  ->
 Engineering Operation
-  ↓
+  ->
 Execution
 ```
 
-La selección de operación forma parte del modelo operativo de cada integración, pero el conjunto de operaciones seleccionado pertenece a JES.
+Selection lives in the integration operating model.  
+The operation catalog belongs to JES.
 
 ---
 
-## Relación con workflow y artefactos
+## Workflow and artifact relation
 
-Las operaciones no reemplazan el workflow.
+Operations do not replace workflow.
 
-- El **workflow** define fases, responsables y cierre del ciclo.
-- La **operación** define el tipo de trabajo ejecutado.
+- Workflow defines phases, roles, and closure.
+- Operation defines work type.
 
-Los artefactos finales se determinan por:
+Final artifacts are determined by:
 
-> **workflow + operation**
+**workflow + operation**
 
-No por preferencia de herramienta.
-
----
-
-## Reglas de implementación para integraciones
-
-Cada integración debe especificar:
-
-1. cómo se activa cada operación (comando o equivalente),
-2. qué prompt(s) implementan esa operación,
-3. qué bundle de artefactos debe entregar.
-
-El mapeo operación → prompt puede ser 1:1 o 1:N según restricciones de la herramienta.
+not by tool preference.
 
 ---
 
-## Gobierno y evolución
+## Integration implementation rules
 
-- Ninguna operación puede contradecir `01_PRINCIPLES.md`.
-- Toda operación debe respetar gates de autoridad del Engineer.
-- Cambios al conjunto de operaciones requieren aprobación explícita del Engineer.
-- Nuevas operaciones solo se incorporan con valor transversal demostrado en más de una integración o contexto.
+Each integration must define:
+1. how each operation is triggered,
+2. what prompt(s) implement it,
+3. what artifact bundle is expected.
+
+Operation-to-prompt mapping may be 1:1 or 1:N.
 
 ---
 
-*Versión: 2026.1 — Actualizado: julio 2026*
+## Governance and evolution
+
+- No operation may violate JES principles.
+- Operations must respect engineer authority gates.
+- Operation set changes require explicit engineer approval.
+- New operations require demonstrated cross-context value.
+
+---
+
+*Version: 2026.2 — Updated: July 2026*

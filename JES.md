@@ -1,213 +1,123 @@
-# JES - Jarvis Engineering System
+# JES - JARVIS Engineering System
 
-**Versión:** 1.0 (Draft)  
-**Autor:** Marc Cuesta Muñoz
-
----
-
-# 1. Introducción
-
-## 1.1 Propósito
-
-JES (Jarvis Engineering System) es un sistema de ingeniería diseñado para organizar, coordinar y gobernar el desarrollo de proyectos de software mediante la colaboración estructurada entre un ingeniero y múltiples inteligencias artificiales.
-
-Su objetivo no es desarrollar software por sí mismo, sino proporcionar un entorno de trabajo donde el diseño, la implementación, la revisión y la evolución de un proyecto puedan realizarse de forma organizada, reproducible y bajo control humano.
-
-JES actúa como una infraestructura de ingeniería que opera de forma transversal sobre todos los proyectos del ecosistema.
-
-No pertenece a ningún proyecto.
-
-Da soporte a todos ellos.
+**Version:** 1.0 (Draft)  
+**Author:** Marc Cuesta Muñoz
 
 ---
 
-## 1.2 Motivación
+## 1. Introduction
 
-El desarrollo de sistemas complejos requiere una enorme cantidad de trabajo intelectual.
+### 1.1 Purpose
 
-Diseñar arquitecturas.
-Tomar decisiones.
-Mantener contexto.
-Revisar código.
-Documentar cambios.
-Investigar tecnologías.
-Validar implementaciones.
+JES is an engineering system designed to organize, coordinate, and govern software development through structured collaboration between an engineer and multiple AI systems.
 
-Las inteligencias artificiales actuales son capaces de asistir en muchas de estas tareas, pero presentan importantes limitaciones:
+Its goal is not to build software by itself, but to provide a working environment where design, implementation, review, and evolution can be performed in a controlled, reproducible, and human-governed way.
 
-- No mantienen contexto a largo plazo.
-- No conocen el estado real del proyecto.
-- No comparten conocimiento entre sí.
-- No poseen criterio arquitectónico propio.
-- No deben tomar decisiones estratégicas.
+JES acts as engineering infrastructure across projects.
 
-JES nace para resolver este problema.
+### 1.2 Motivation
 
-Su función consiste en convertir múltiples herramientas de inteligencia artificial en un sistema coordinado de ingeniería.
+Complex systems require significant intellectual work:
+- designing architecture,
+- making decisions,
+- preserving context,
+- reviewing code,
+- documenting changes,
+- researching technologies,
+- validating implementations.
 
----
+AI can assist in many tasks but has limits:
+- weak long-term memory,
+- incomplete project state awareness,
+- no shared persistent knowledge by default,
+- no autonomous architectural judgment,
+- no strategic authority.
 
-## 1.3 Objetivo
+JES exists to turn multiple AI tools into a coordinated engineering system.
 
-El objetivo principal de JES es aumentar la capacidad de ingeniería del desarrollador sin perder el control sobre el proyecto.
+### 1.3 Objective
 
-JES debe permitir:
+The primary objective is to increase engineering capability while preserving full human control.
 
-- reducir el tiempo dedicado a tareas repetitivas;
-- aumentar la calidad del diseño;
-- mejorar la consistencia del código;
-- preservar el conocimiento generado durante el desarrollo;
-- facilitar la colaboración entre distintas inteligencias artificiales;
-- mantener siempre la autoridad en manos del ingeniero.
-
----
-
-# 2. ¿Qué es JES?
-
-JES no es un asistente.
-
-JES no es un chatbot.
-
-JES no es una inteligencia artificial.
-
-JES no es un framework.
-
-JES es un sistema de ingeniería.
-
-Su responsabilidad consiste en coordinar personas, inteligencia artificial, conocimiento y procesos para desarrollar proyectos de software de forma estructurada.
-
-JES opera como una capa superior que gobierna el proceso de desarrollo sin formar parte del producto desarrollado.
-
-Por esta razón, JES puede utilizarse simultáneamente sobre múltiples proyectos diferentes.
-
-Ejemplos:
-
-- JARVIS
-- MentalOS
-- EquCampus
-- futuros proyectos
-
-Todos ellos comparten el mismo sistema de ingeniería.
+JES should:
+- reduce repetitive effort,
+- improve design quality,
+- improve code consistency,
+- preserve generated knowledge,
+- enable collaboration across AI tools,
+- keep authority with the engineer.
 
 ---
 
-# 3. Alcance
+## 2. What JES is
 
-JES es responsable de definir:
+JES is not an assistant, chatbot, AI model, or framework.
 
-- cómo se desarrolla un proyecto;
-- cómo colaboran las inteligencias artificiales;
-- cómo se conserva el conocimiento;
-- cómo se organiza el contexto;
-- cómo se documentan las decisiones;
-- cómo se revisan los cambios;
-- cómo se garantiza la calidad del desarrollo.
+JES is an engineering system.
 
-JES no es responsable de implementar la lógica de negocio de un proyecto.
+It coordinates people, AI systems, knowledge, and process to develop software projects in a structured way.
 
-Cada proyecto mantiene su propia arquitectura interna.
+It operates above individual projects, governing development process without becoming part of product code.
 
 ---
 
-# 4. Principio Fundamental
+## 3. Scope
 
-El principio más importante de JES es el siguiente:
+JES defines:
+- how projects are developed,
+- how AI systems collaborate,
+- how knowledge is preserved,
+- how context is organized,
+- how decisions are documented,
+- how changes are reviewed,
+- how quality is ensured.
 
-> El ingeniero mantiene siempre la autoridad absoluta sobre el sistema.
-
-Las inteligencias artificiales pueden:
-
-- proponer;
-- diseñar;
-- implementar;
-- revisar;
-- investigar;
-- documentar.
-
-Pero nunca poseen autoridad sobre el proyecto.
-
-Toda decisión estratégica pertenece al ingeniero responsable.
-
-Este principio no puede ser violado por ninguna automatización del sistema.
+JES does not implement project business logic.
 
 ---
 
-# 5. Responsabilidades del Sistema
+## 4. Fundamental principle
 
-JES tiene seis responsabilidades fundamentales.
+The most important JES principle:
 
-## 5.1 Organización
+> The engineer always retains final authority over the system.
 
-Organizar el proceso de ingeniería.
-
----
-
-## 5.2 Coordinación
-
-Coordinar el trabajo entre personas e inteligencias artificiales.
+AI systems may propose, design, implement, review, research, and document.  
+They never own strategic authority.
 
 ---
 
-## 5.3 Contexto
+## 5. Core responsibilities
 
-Mantener el contexto necesario para que cada IA pueda trabajar correctamente.
-
----
-
-## 5.4 Conocimiento
-
-Preservar el conocimiento generado durante el proyecto.
-
----
-
-## 5.5 Calidad
-
-Garantizar que todo cambio pase por un proceso de validación.
+1. Organization — structure engineering process  
+2. Coordination — orchestrate human/AI work  
+3. Context — maintain working context quality  
+4. Knowledge — preserve generated knowledge  
+5. Quality — enforce validation  
+6. Evolution — improve system without losing coherence
 
 ---
 
-## 5.6 Evolución
+## 6. Operating cycle
 
-Permitir que el sistema mejore continuamente sin perder coherencia.
+```text
+Intent
+  ->
+Context understanding
+  ->
+Design
+  ->
+Planning
+  ->
+Implementation
+  ->
+Review
+  ->
+Human validation
+  ->
+Documentation
+  ->
+Integration
+```
 
----
-
-# 6. Forma de Actuación
-
-Todo trabajo realizado dentro de JES sigue el mismo ciclo.
-
-Intención
-
-↓
-
-Comprensión del contexto
-
-↓
-
-Diseño
-
-↓
-
-Planificación
-
-↓
-
-Implementación
-
-↓
-
-Revisión
-
-↓
-
-Validación humana
-
-↓
-
-Documentación
-
-↓
-
-Integración
-
-Este flujo es obligatorio para cualquier cambio significativo realizado sobre un proyecto.
+This flow is mandatory for significant changes.
