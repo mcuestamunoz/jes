@@ -9,9 +9,13 @@ The integration translates JES methodology into Cursor-compatible operational ar
 JES defines the methodology.  
 This integration adapts it to Cursor.
 
-Shared engineering operations are defined in:
+Shared Core references:
 
+- `../../docs/02.5_ENGINEERING_COGNITION.md`
+- `../../docs/02.6_ENGINEERING_STATE.md`
+- `../../docs/02.7_ENGINEERING_STATE_LIFECYCLE.md`
 - `../../docs/08_ENGINEERING_OPERATIONS.md`
+- `../../docs/09_OPERATION_SELECTION.md`
 
 ## Structure
 
@@ -19,10 +23,12 @@ Shared engineering operations are defined in:
 cursor/
 ├── FOUNDATION.md
 ├── OPERATING_MODEL.md
+├── RUNTIME.md
 ├── README.md
 ├── rules/
 ├── prompts/
 ├── commands/
+├── policies/
 ├── skills/
 └── subagents/
 ```
@@ -30,15 +36,17 @@ cursor/
 ## Components
 
 - `FOUNDATION.md`: baseline operational contract between JES and Cursor.
-- `OPERATING_MODEL.md`: translation model from engineering intent to JES-aligned execution and artifacts.
+- `OPERATING_MODEL.md`: translation model from engineering intent to JES-aligned execution.
+- `RUNTIME.md`: how JES cycles, state, and lifecycle live inside Cursor.
 - `rules/`: Cursor-specific constraints derived from JES.
-- `prompts/`: prompts that implement the contract and rules.
+- `prompts/`: prompts that implement operations.
 - `commands/`: operational command definitions.
+- `policies/`: Cursor-specific policy adapters.
 - `skills/`: reusable skill-level behaviors for Cursor agents.
 - `subagents/`: specialized subagent definitions and orchestration artifacts.
 
 ## Scope
 
-This directory should not redefine JES principles, workflows, or governance.
+This directory should not redefine JES principles, workflows, cognition, state, or governance.
 
 It must reference and implement JES, not replace it.

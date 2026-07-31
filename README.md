@@ -8,11 +8,15 @@ A tool-independent engineering methodology for human–AI collaborative software
 
 - **Principles** — the values that govern all engineering decisions
 - **Architecture** — how the system is structured
+- **Engineering Cognition** — how the engineer navigates work intentions
+- **Engineering State** — live representation of an engineering cycle in progress
+- **State Lifecycle** — how Engineering State is created, evolved, persisted, and ended
 - **Roles** — who is responsible for what
-- **Workflow** — how engineering cycles are executed
+- **Workflow** — how engineering cycles are closed and validated
 - **Rules** — the constraints that apply within those cycles
 - **Ecosystem** — the capabilities required and how tools provide them
 - **Engineering Operations** — tool-agnostic units of engineering work
+- **Operation Selection** — how to choose the next coherent available operation
 
 ---
 

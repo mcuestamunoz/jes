@@ -62,10 +62,44 @@ Defines governance and methodology artifacts:
 - `SYSTEM_DEFINITION.md`
 - `01_PRINCIPLES.md`
 - `02_ARCHITECTURE.md`
+- `02.5_ENGINEERING_COGNITION.md`
+- `02.6_ENGINEERING_STATE.md`
+- `02.7_ENGINEERING_STATE_LIFECYCLE.md`
 - `03_WORKFLOW.md`
 - `04_ROLES.md`
 - `05_RULES.md`
 - `07_ECOSYSTEM.md`
+- `08_ENGINEERING_OPERATIONS.md`
+- `09_OPERATION_SELECTION.md`
+
+Within Core methodology, conceptual order is:
+
+```text
+Principles
+    ->
+Architecture
+    ->
+Engineering Cognition
+    ->
+Engineering State
+    ->
+State Lifecycle
+    ->
+Workflow
+    ->
+Operations
+    ->
+Operation Selection
+```
+
+Engineering Cognition explains how the engineer navigates intentions.  
+Engineering State carries the live cycle instance (`current_mode`, status, triggers).  
+State Lifecycle defines how that instance is created, evolved, persisted, and ended.  
+Workflow explains when work is complete.  
+Operations define executable units that materialize that movement.  
+Operation Selection chooses the next coherent available operation without inventing work.
+
+See `02.5_ENGINEERING_COGNITION.md`, `02.6_ENGINEERING_STATE.md`, `02.7_ENGINEERING_STATE_LIFECYCLE.md`, and `09_OPERATION_SELECTION.md`.
 
 ---
 
@@ -76,7 +110,7 @@ Defines tool-agnostic units of engineering work (e.g., Research, Analyze, Plan, 
 Document: `08_ENGINEERING_OPERATIONS.md`.
 
 Purpose:
-- bridge intent and workflow execution,
+- materialize cognitive movement into executable units,
 - provide shared operation semantics across integrations.
 
 ---
@@ -120,6 +154,23 @@ Tool output -> Engineer validation -> Repository integration
 ```
 
 No artifact becomes system truth without explicit engineer approval.
+
+---
+
+## Belonging criterion for Core vs integration
+
+> If a concept would still matter after every AI tool disappears, it belongs to JES Core.  
+> If it only makes sense because a specific tool exists, it belongs to that tool’s integration.
+
+Use this criterion before adding documents, components, or abstractions.
+
+Examples:
+
+- Engineering Cognition → Core
+- Engineering State → Core
+- Operation Selection → Core
+- Cursor HUD rendering details → integration
+- Cursor prompt syntax → integration
 
 ---
 

@@ -98,8 +98,10 @@ Engineering Operation
 Execution
 ```
 
-Selection lives in the integration operating model.  
-The operation catalog belongs to JES.
+Operation Selection is a Core contract (`09_OPERATION_SELECTION.md`).  
+It chooses among operations declared available by the current integration.  
+It evaluates the complete Engineering State, not only mode.  
+It never invents work.
 
 ---
 
