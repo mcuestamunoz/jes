@@ -35,7 +35,7 @@ Projects that adopt JES declare the version they use:
 engineering:
   methodology:
     name: JES
-    version: "1.1"
+    version: "1.2"
 ```
 
 The methodology remains independent of any specific project.  
@@ -45,8 +45,8 @@ Projects consume JES. They do not contain it.
 
 ## Version
 
-Current: **v1.1** — Integration architecture refinement  
-Status: Stable core
+Current: **v1.2** — Executable engineering core  
+Status: Stable core (implementation-driven evolution from here)
 
 See `CHANGELOG.md` for release notes.
 

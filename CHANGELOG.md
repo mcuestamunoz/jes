@@ -2,6 +2,34 @@
 
 All notable changes to the JARVIS Engineering System (JES) are documented in this file.
 
+## v1.2 — 2026-07-31
+
+Executable engineering core: cognition, live state, lifecycle, and operation selection.  
+Core growth pauses unless real implementation exposes a limitation.
+
+### Added
+
+- Engineering Cognition (`docs/02.5_ENGINEERING_COGNITION.md`)
+- Engineering State contract (`docs/02.6_ENGINEERING_STATE.md`)
+- Engineering State Lifecycle (`docs/02.7_ENGINEERING_STATE_LIFECYCLE.md`)
+- Operation Selection (`docs/09_OPERATION_SELECTION.md`)
+- Cursor Runtime materialization (`integrations/cursor/RUNTIME.md`)
+- Project-owned state persistence location (`.jes/state/`)
+- Core vs integration belonging criterion in Architecture / Cursor Foundation
+
+### Changed
+
+- Core pipeline now reads:
+  - Principles → Architecture → Cognition → State → Lifecycle → Workflow → Operations → Selection → Integration Runtime
+- Cursor Operating Model references Core State/Lifecycle/Selection contracts
+- Integrations declare Available Operations; Selection chooses among them
+- Documentation treated as consequence of Communicate (not a cognitive mode)
+
+### Discipline
+
+- Do not modify Core unless a real implementation demonstrates a Core limitation.
+- Next phase: validate the full pipeline with a minimal Cursor integration.
+
 ## v1.1 — 2026-07-28
 
 Architecture refinement that separates methodology from tool implementation while preserving v1.0 principles.
