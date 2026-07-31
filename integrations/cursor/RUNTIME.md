@@ -56,6 +56,35 @@ State Update + Workflow Closure Check
 
 ---
 
+## Runtime v0 (current materialization)
+
+Current implementation scope:
+
+```text
+User Message
+  -> Interpretation
+  -> Engineering State
+  -> Persist / Restore
+```
+
+Artifacts:
+
+- `runtime/state_tool.py`
+- `runtime/engineering_state.schema.json`
+- `policies/runtime_state_v0.md`
+- `../../validation/scenario_001.md` … `scenario_003.md`
+- project snapshot: `../../.jes/state/engineering_state.json`
+
+Out of scope for v0:
+
+- Operation Selection execution
+- Operation prompts/commands
+- multi-operation catalogs
+
+Pass scenarios 001–003 before advancing to Selection / Research.
+
+---
+
 ## Dual persistence model
 
 Runtime memory and project persistence have different responsibilities.

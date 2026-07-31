@@ -1,4 +1,16 @@
 {
-  "status": "empty",
-  "note": "Live Engineering State snapshots are written here when Lifecycle requires persistence."
+  "schema_version": "1.0",
+  "cycle_intent": null,
+  "scope": null,
+  "execution_status": "idle",
+  "current_mode": null,
+  "movement_trigger": null,
+  "relevant_workflow_phases": [],
+  "applicable_rules": [],
+  "required_artifacts": [],
+  "open_questions": [],
+  "active_operation": null,
+  "authority_gates": [],
+  "coherence_checklist": null,
+  "updated_at": "2026-07-31T09:59:56Z"
 }

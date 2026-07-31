@@ -25,6 +25,7 @@ cursor/
 ├── OPERATING_MODEL.md
 ├── RUNTIME.md
 ├── README.md
+├── runtime/
 ├── rules/
 ├── prompts/
 ├── commands/
@@ -38,10 +39,11 @@ cursor/
 - `FOUNDATION.md`: baseline operational contract between JES and Cursor.
 - `OPERATING_MODEL.md`: translation model from engineering intent to JES-aligned execution.
 - `RUNTIME.md`: how JES cycles, state, and lifecycle live inside Cursor.
+- `runtime/`: Runtime v0 tools (state create/restore/persist/HUD).
 - `rules/`: Cursor-specific constraints derived from JES.
 - `prompts/`: prompts that implement operations.
 - `commands/`: operational command definitions.
-- `policies/`: Cursor-specific policy adapters.
+- `policies/`: Cursor-specific policy adapters (including Runtime v0).
 - `skills/`: reusable skill-level behaviors for Cursor agents.
 - `subagents/`: specialized subagent definitions and orchestration artifacts.
 
