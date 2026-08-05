@@ -53,12 +53,12 @@ Core files under protection:
 | Explain | Explore | Communication + Understanding | No | `scenario_007` |
 | Analyze | Model | Mental Model + Reasoning | No | `scenario_008` |
 | Plan | Plan | State + Selection + Workflow + Required Artifacts + Scope + Open Questions + Authority Gates | No | `scenario_009` |
-| Implement | Build | Build + Lifecycle + Validation | ⏳ | — |
+| Implement | Build | State + Lifecycle + Selection + Workflow + Authority Gates + Coherence Checklist + Required Artifacts + Documentation + Validation | No | `scenario_010` |
 | Refactor | Build | Build + Constraints | ⏳ | — |
 | Validate | Validate | Validation + Closure evidence | ⏳ | — |
 | Document | Communicate consequence | Knowledge persistence | ⏳ | — |
 
-## Preferred fill order (non-destructive first)
+## Preferred fill order
 
 ```text
 Research  ✅
@@ -66,13 +66,21 @@ Review    ✅
 Explain   ✅
 Analyze   ✅
 Plan      ✅
-Implement
+Implement ✅   ← first mutating Operation
 Refactor
 ```
 
-Rationale: knowledge ops first, then Plan as the bridge that turns approved intent into verifiable work **without** mutating the repository.  
-`Implement` comes only after that bridge holds.
+Implement criterion:
+
+> Does Implement modify **only** what the Execution Plan authorizes within scope?
+
+## Claim (after Implement)
+
+If Implement lands without Core edits, the Core is validated against **knowledge** and **transformation** operations — not only designed.
+
+Project focus then shifts toward catalog growth, integrations, and matrix evidence — with Core as stable base.
 
 ## Milestone
 
-See `MILESTONE_core_v12_first_implementation.md`.
+See `MILESTONE_core_v12_first_implementation.md` and  
+`MILESTONE_core_validated_read_and_transform.md`.

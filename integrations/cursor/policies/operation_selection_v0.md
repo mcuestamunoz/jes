@@ -6,6 +6,11 @@ Implements Core `docs/09_OPERATION_SELECTION.md` inside Cursor.
 
 ```text
 Research
+Review
+Explain
+Analyze
+Plan
+Implement
 ```
 
 Declared in:
@@ -60,3 +65,11 @@ This Paso 2 must not modify:
 - `docs/02.7_ENGINEERING_STATE_LIFECYCLE.md`
 - `docs/08_ENGINEERING_OPERATIONS.md`
 - `docs/09_OPERATION_SELECTION.md`
+
+
+## Materialization status (Implement v0)
+
+- Updated: 2026-08-05T17:18:16Z
+- Change authorized by Execution Plan + bounded scope.
+- Catalog synced to `runtime/available_operations.json`.
+- No Core contracts modified.

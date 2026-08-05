@@ -5,7 +5,8 @@
     "Review",
     "Explain",
     "Analyze",
-    "Plan"
+    "Plan",
+    "Implement"
   ],
-  "notes": "Non-destructive ops first. Plan is transformation-prep (no repo mutation). Each op must validate distinct Core facets without Core edits."
+  "notes": "Implement is the first mutating op. It may change only what the Execution Plan authorizes within scope. Core stays frozen unless a matrix cell fails."
 }

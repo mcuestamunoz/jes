@@ -171,7 +171,12 @@ def infer_initial_mode(cycle_intent: str) -> str:
     t = cycle_intent.strip().lower()
     if any(k in t for k in ("review", "validate", "check")):
         return "Validate"
-    # Plan before Build: "Plan the implementation..." must not become Build.
+    # Implement before Plan: "Implement the approved Execution Plan..." is Build.
+    if t.startswith("implement") or any(
+        k in t for k in ("execute the plan", "apply the plan", "execute plan", "apply plan")
+    ):
+        return "Build"
+    # Plan before generic Build: "Plan the implementation..." must not become Build.
     if any(k in t for k in ("plan", "break down", "tasks", "execution plan")):
         return "Plan"
     if any(k in t for k in ("implement", "fix", "add ", "create code")):
@@ -330,6 +335,52 @@ def cmd_hud(args: argparse.Namespace) -> int:
     return 0
 
 
+TRIGGER_TYPES = {"evidence", "decision", "constraint", "objective", "clarification"}
+
+
+def cmd_move(args: argparse.Namespace) -> int:
+    """Lifecycle mode movement with typed trigger (02.6 transition rules)."""
+    state = load_state()
+    if state.get("status") == "empty" or "schema_version" not in state:
+        print("NO_LIVE_STATE")
+        return 2
+    if args.trigger not in TRIGGER_TYPES:
+        print(f"INVALID_TRIGGER: {args.trigger}")
+        return 1
+    if args.mode not in MODES:
+        print(f"invalid mode: {args.mode}")
+        return 1
+    if state.get("authority_gates"):
+        print("REFUSED: authority_gates pending")
+        return 2
+
+    state["current_mode"] = args.mode
+    state["movement_trigger"] = {
+        "type": args.trigger,
+        "note": args.note or None,
+    }
+    if args.intent:
+        state["cycle_intent"] = args.intent.strip()
+    if args.mode in {"Build", "Validate"}:
+        state["coherence_checklist"] = state.get("coherence_checklist") or [
+            "code",
+            "tests",
+            "docs",
+            "contracts",
+            "workflow",
+        ]
+    else:
+        state["coherence_checklist"] = None
+    if state.get("execution_status") == "interpreting":
+        state["execution_status"] = "active"
+    save_state(state)
+    print("MOVED")
+    print(f"current_mode: {state['current_mode']}")
+    print(f"movement_trigger: {state['movement_trigger']}")
+    print(json.dumps(state, indent=2, ensure_ascii=False))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="JES Cursor Runtime v0 state tool")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -360,6 +411,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     h = sub.add_parser("hud", help="Render Engineering HUD")
     h.set_defaults(func=cmd_hud)
+
+    m = sub.add_parser("move", help="Lifecycle mode movement with typed trigger")
+    m.add_argument("--mode", required=True, choices=sorted(MODES))
+    m.add_argument("--trigger", required=True, choices=sorted(TRIGGER_TYPES))
+    m.add_argument("--note")
+    m.add_argument("--intent", help="Optional Cycle Intent update on movement")
+    m.set_defaults(func=cmd_move)
 
     return p
 

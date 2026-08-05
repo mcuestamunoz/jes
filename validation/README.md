@@ -18,6 +18,7 @@ They define expected behavior of the pipeline so Runtime / Selection / Operation
 | `scenario_007` | Explain v0 | Communication + Selection disambiguation |
 | `scenario_008` | Analyze v0 | Mental Model + Reasoning (Model) |
 | `scenario_009` | Plan v0 | Execution Plan + nearly-full State |
+| `scenario_010` | Implement v0 | First mutation; plan-authorized scope only |
 
 Also see:
 

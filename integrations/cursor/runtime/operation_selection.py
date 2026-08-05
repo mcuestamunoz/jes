@@ -22,7 +22,10 @@ MODE_COMPAT = {
     "Explain": {"Explore"},
     "Analyze": {"Model"},
     "Plan": {"Plan"},
+    "Implement": {"Build"},
 }
+
+PLAN_ARTIFACT = ROOT / ".jes" / "artifacts" / "execution_plan.md"
 
 
 def load_json(path: Path) -> dict:
@@ -110,6 +113,32 @@ def advances_cycle_intent(op: str, state: dict, user_message: str | None) -> boo
             return False
         # Pending gates mean Decide is not closed; Plan must not proceed.
         if state.get("authority_gates"):
+            return False
+        return True
+
+    if op == "Implement":
+        if mode not in MODE_COMPAT["Implement"]:
+            return False
+        if not any(
+            k in text
+            for k in (
+                "implement",
+                "execute the plan",
+                "execute plan",
+                "apply the plan",
+                "apply plan",
+            )
+        ):
+            return False
+        if not state.get("scope"):
+            return False
+        if state.get("authority_gates"):
+            return False
+        if state.get("open_questions"):
+            return False
+        if not state.get("coherence_checklist"):
+            return False
+        if not PLAN_ARTIFACT.exists():
             return False
         return True
 
