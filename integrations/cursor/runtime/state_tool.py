@@ -123,9 +123,7 @@ def validate_basic(state: dict) -> list[str]:
             "clarification",
         }:
             errors.append(f"invalid movement_trigger.type: {trigger.get('type')}")
-    # Runtime v0: no operations yet.
-    if state.get("active_operation") is not None:
-        errors.append("active_operation must be null in Runtime v0 (no operations yet)")
+    # active_operation may be null or an Available Operation id during execution.
     return errors
 
 

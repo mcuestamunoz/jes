@@ -111,6 +111,25 @@ Still out of scope:
 
 Core files must remain untouched unless a real limitation appears.
 
+## Research v0 (current materialization)
+
+First engineering Operation.
+
+```text
+Selection(Research)
+  -> repository context ranking
+  -> .jes/artifacts/understanding.md
+  -> State Update (mode unchanged)
+```
+
+Artifacts:
+
+- `runtime/research.py`
+- `policies/research_v0.md`
+- `../../validation/scenario_005.md`
+
+Consumes Engineering State only (not Cognition docs).
+
 ---
 
 ## Dual persistence model

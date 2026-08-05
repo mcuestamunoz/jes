@@ -13,9 +13,10 @@ They define expected behavior of the pipeline so Runtime / Selection / Operation
 | `scenario_002` | Runtime v0 | Persist / restore |
 | `scenario_003` | Runtime v0 | HUD visibility |
 | `scenario_004` | Selection v0 | Research unavailable in Build mode |
+| `scenario_005` | Research v0 | End-to-end Understanding artifact |
 
 Rule:
 
-> Do not implement Research execution until scenario 004 passes.  
+> Do not expand the operation catalog until scenario 005 passes.  
 > Do not modify Core (`02.5`–`02.7`, `08`, `09`) unless implementation proves a limitation.
 
