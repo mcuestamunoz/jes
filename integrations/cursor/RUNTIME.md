@@ -33,6 +33,8 @@ Correct framing for daily use:
 
 The full Engineer Interface (how that conversation feels day to day) is Phase 3 — see `../../validation/PHASE_3_ENGINEERING_WORKFLOW.md`.
 
+The Engineer must not need to manage Modes, status enums, or state files manually for normal work.
+
 ---
 
 ## Runtime architecture
