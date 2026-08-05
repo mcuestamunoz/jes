@@ -1,3 +1,22 @@
+# Explanation
+
+Generated: 2026-08-05T17:06:33Z
+
+## Question
+
+Explain how Operation Selection fits into the Core architecture.
+
+## Plain explanation
+
+This Explanation artifact communicates the current understanding of the Cycle Intent
+using Engineering State and, when available, a prior Understanding artifact.
+
+Current mode is `Explore` with status `active`.
+Explain v0 does not gather new research depth; it communicates what is already in state/context.
+
+## Basis (from prior Understanding)
+
+```markdown
 # Understanding
 
 Generated: 2026-08-05T17:04:09Z
@@ -38,3 +57,17 @@ should be understood through the listed context files before any Design/Build wo
 - No implementation proposals
 - No multi-step plan
 - Cognition docs were not consulted; only Engineering State + repository files
+```
+
+## Communicated takeaway
+
+The engineering question under discussion is: Explain how Operation Selection fits into the Core architecture.
+Answer it by referring to the Core pipeline position carried in Engineering State,
+without changing mode or proposing implementation work.
+
+## Non-goals respected
+
+- No deep repository research pass
+- No mode transition
+- No implementation proposals
+- Cognition docs were not consulted; only Engineering State (+ optional Understanding)

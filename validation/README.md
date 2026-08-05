@@ -15,6 +15,8 @@ They define expected behavior of the pipeline so Runtime / Selection / Operation
 | `scenario_004` | Selection v0 | Incoherent op unavailable |
 | `scenario_005` | Research v0 | End-to-end Understanding |
 | `scenario_006` | Review v0 | End-to-end Evidence (Validate) |
+| `scenario_007` | Explain v0 | Communication + Selection disambiguation |
+| `scenario_008` | Analyze v0 | Mental Model + Reasoning (Model) |
 
 Also see:
 

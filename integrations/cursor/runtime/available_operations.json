@@ -2,7 +2,9 @@
   "integration": "cursor",
   "available_operations": [
     "Research",
-    "Review"
+    "Review",
+    "Explain",
+    "Analyze"
   ],
-  "notes": "Expand only to validate distinct JES modes. Each op must land without Core edits."
+  "notes": "Non-destructive ops first. Each must validate distinct Core facets without Core edits."
 }

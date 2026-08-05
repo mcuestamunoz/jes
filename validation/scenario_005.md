@@ -81,7 +81,7 @@ required_artifacts: includes Understanding (.jes/artifacts/understanding.md)
 python3 integrations/cursor/runtime/state_tool.py clear --status idle
 
 python3 integrations/cursor/runtime/state_tool.py interpret \
-  --message "Explain how Operation Selection fits into the Core architecture." \
+  --message "Investigate how Operation Selection fits into the Core architecture." \
   --persist
 
 python3 integrations/cursor/runtime/operation_selection.py select

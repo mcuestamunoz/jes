@@ -15,10 +15,12 @@ ROOT = Path(__file__).resolve().parents[3]
 STATE_PATH = ROOT / ".jes" / "state" / "engineering_state.json"
 AVAILABLE_PATH = Path(__file__).resolve().parent / "available_operations.json"
 
-# Disjoint coherence tables keep Selection deterministic (no ranking needed).
-COHERENT_MODES = {
+# Mode compatibility (necessary, not sufficient).
+MODE_COMPAT = {
     "Research": {"Explore", "Model"},
     "Review": {"Validate"},
+    "Explain": {"Explore"},
+    "Analyze": {"Model"},
 }
 
 
@@ -65,20 +67,68 @@ def live_state_ok(state: dict) -> tuple[bool, str]:
     return True, ""
 
 
-def is_op_coherent(op: str, state: dict) -> bool:
-    modes = COHERENT_MODES.get(op, set())
-    return state.get("current_mode") in modes
+def intent_text(state: dict, user_message: str | None) -> str:
+    return (user_message or state.get("cycle_intent") or "").lower()
+
+
+def advances_cycle_intent(op: str, state: dict, user_message: str | None) -> bool:
+    """Coherence with Cycle Intent (not ranking)."""
+    text = intent_text(state, user_message)
+    mode = state.get("current_mode")
+
+    if op == "Review":
+        return mode in MODE_COMPAT["Review"]
+
+    if op == "Explain":
+        if mode not in MODE_COMPAT["Explain"]:
+            return False
+        return any(k in text for k in ("explain", "summarize", "describe", "in plain"))
+
+    if op == "Analyze":
+        if mode not in MODE_COMPAT["Analyze"]:
+            return False
+        return any(
+            k in text
+            for k in (
+                "analyze",
+                "analysis",
+                "constraints",
+                "risks",
+                "mental model",
+                "evaluate scope",
+            )
+        )
+
+    if op == "Research":
+        if mode not in MODE_COMPAT["Research"]:
+            return False
+        # Leave explain-primary Explore intents to Explain when both exist.
+        if mode == "Explore" and any(k in text for k in ("explain", "summarize", "describe")):
+            return False
+        # Leave analyze-primary Model intents to Analyze when both exist.
+        if mode == "Model" and any(
+            k in text for k in ("analyze", "analysis", "constraints", "risks", "mental model")
+        ):
+            return False
+        return True
+
+    return False
+
+
+def is_op_coherent(op: str, state: dict, user_message: str | None = None) -> bool:
+    modes = MODE_COMPAT.get(op, set())
+    if state.get("current_mode") not in modes:
+        return False
+    return advances_cycle_intent(op, state, user_message)
 
 
 def select(state: dict, available: list[str], user_message: str | None = None) -> dict:
     """Functional selection: same inputs => same result. No ranking."""
-    _ = user_message
-
     ok, reason = live_state_ok(state)
     if not ok:
         return result("unavailable", reason=reason)
 
-    coherent = [op for op in available if is_op_coherent(op, state)]
+    coherent = [op for op in available if is_op_coherent(op, state, user_message)]
 
     if len(coherent) == 1:
         op = coherent[0]
@@ -86,7 +136,7 @@ def select(state: dict, available: list[str], user_message: str | None = None) -
             "selected",
             operation=op,
             candidates=coherent,
-            reason=f"{op} is coherent with current mode and live Engineering State.",
+            reason=f"{op} is coherent with current mode and Cycle Intent.",
         )
 
     if len(coherent) > 1:

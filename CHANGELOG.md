@@ -15,6 +15,9 @@ Runtime + Operation Selection + Research completed the full live pipeline withou
 
 Evidence: `validation/MILESTONE_core_v12_first_implementation.md`, `validation/MATRIX.md`, scenarios 001–005.
 
+Matrix fill (non-destructive, Core untouched): Review (`scenario_006`), Explain (`scenario_007`), Analyze (`scenario_008`).  
+Governance: fill the matrix; Core changes require a failed matrix cell.
+
 ### Added
 
 - Engineering Cognition (`docs/02.5_ENGINEERING_COGNITION.md`)

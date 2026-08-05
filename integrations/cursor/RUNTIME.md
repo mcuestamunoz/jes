@@ -130,6 +130,24 @@ Artifacts:
 
 Consumes Engineering State only (not Cognition docs).
 
+## Review / Explain / Analyze v0
+
+Non-destructive operations that fill the validation matrix without Core edits.
+
+| Operation | Mode | Artifact | Scenario |
+|---|---|---|---|
+| Review | Validate | `.jes/artifacts/evidence.md` | `scenario_006` |
+| Explain | Explore | `.jes/artifacts/explanation.md` | `scenario_007` |
+| Analyze | Model | `.jes/artifacts/mental_model.md` | `scenario_008` |
+
+Artifacts:
+
+- `runtime/review.py`, `runtime/explain.py`, `runtime/analyze.py`
+- `policies/review_v0.md`, `policies/explain_v0.md`, `policies/analyze_v0.md`
+- `../../validation/MATRIX.md`
+
+Available Operations catalog grows only to validate distinct Core facets.
+
 ---
 
 ## Dual persistence model
