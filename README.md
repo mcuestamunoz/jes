@@ -57,7 +57,8 @@ Constitutional Core rule: `validation/CORE_MAINTENANCE.md`
 Release evidence: `validation/MILESTONE_v13_first_implementation_validation.md`  
 Matrix: `validation/MATRIX.md`
 
-Next phase (not started): `validation/PHASE_3_ENGINEERING_WORKFLOW.md`
+Next phase (design opened): `validation/PHASE_3_ENGINEERING_WORKFLOW.md`  
+— Engineer Interface: converse with **JES** in intentions, not Operation names.
 
 See `CHANGELOG.md` for release notes.
 

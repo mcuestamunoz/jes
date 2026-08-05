@@ -41,7 +41,7 @@ v2.0  (future) Core validated across independent integrations
 
 ### Explicitly out of scope for v1.3
 
-- Personal daily workflow (Phase 3 — opens after this release)
+- Engineer Interface / daily experience (Phase 3 — design opens after this release)
 - Second integration / empirical P6
 - Large Operation catalog expansion
 

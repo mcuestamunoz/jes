@@ -90,4 +90,4 @@ P6 / second integration remain later; **Phase 3** (daily engineer workflow) open
 - `MILESTONE_core_validated_read_and_transform.md`
 - `MILESTONE_ecosystem_phase.md`
 - `CORE_MAINTENANCE.md`
-- `PHASE_3_ENGINEERING_WORKFLOW.md` — next phase (not started)
+- `PHASE_3_ENGINEERING_WORKFLOW.md` — Engineer Interface / daily experience (design opened)

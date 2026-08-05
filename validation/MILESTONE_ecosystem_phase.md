@@ -1,25 +1,37 @@
 # Milestone — After v1.3 (sequence reminder)
 
-v1.3 closed Core validation + first Cursor materialization.
+## What this milestone closes
 
-## Order from here
+PR #3 / tag `v1.3`: Core validated + first Cursor materialization.
+
+## What opens next
 
 ```text
-JES Core v1.2 / maintenance     ✅ (via v1.3 validation)
-Cursor Runtime                  ✅
-Operations v1 (minimal useful)  ⏳
-Cursor consolidated             ⏳
-Phase 3 — personal workflow     ⏳  (see PHASE_3_ENGINEERING_WORKFLOW.md)
-Second integration              ← only if practice justifies it (P9)
+Phase 3 — Engineering Workflow in Practice
+         (Engineer Interface with JES)
 ```
 
-## Do not collapse
+See `PHASE_3_ENGINEERING_WORKFLOW.md`.
 
-| Later idea | Immediate action |
-|---|---|
-| P6 empirical proof | Not “install Claude Code now” |
-| Multi-tool ecosystem | Not before workflow roles are known |
+Discovery already captured there:
 
-## v2.0 gate (future)
+> You do not open the tool to request code.  
+> You open it to start an engineering cycle — and speak in intentions.
+
+## Deferred still
+
+- Second integration / empirical P6
+- Large Operation catalog
+
+## Near-term order
+
+```text
+v1.3 closed                         ✅
+Phase 3 Engineer Interface design   ← now
+Operations v1 remainder / Cursor polish as practice demands
+Second integration                  ← only if practice justifies it (P9)
+```
+
+## v2.0 gate (unchanged)
 
 Core validated by multiple independent integrations → claim tool portability.

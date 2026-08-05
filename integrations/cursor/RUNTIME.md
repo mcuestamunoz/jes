@@ -25,7 +25,13 @@ This document defines Cursor-specific materialization:
 > Cursor maintains Engineering State.  
 > State is invisible by default and visible only when useful or required by Governance.
 
-The Engineer must not need to manage Modes, status enums, or state files manually for normal work.
+Correct framing for daily use:
+
+> The Engineer does not open Cursor to request code.  
+> The Engineer opens Cursor to **start (or resume) an engineering cycle**.  
+> They never need to name Operations; JES translates intent into Selection and execution.
+
+The full Engineer Interface (how that conversation feels day to day) is Phase 3 — see `../../validation/PHASE_3_ENGINEERING_WORKFLOW.md`.
 
 ---
 

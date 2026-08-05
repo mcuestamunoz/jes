@@ -28,7 +28,7 @@ Also see:
 - `MILESTONE_core_v12_first_implementation.md`
 - `MILESTONE_core_validated_read_and_transform.md`
 - `MILESTONE_ecosystem_phase.md`
-- `PHASE_3_ENGINEERING_WORKFLOW.md` — next phase (not started)
+- `PHASE_3_ENGINEERING_WORKFLOW.md` — Engineer Interface (design opened; post-v1.3)
 
 Rule:
 
