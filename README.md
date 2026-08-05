@@ -1,5 +1,7 @@
 # JARVIS Engineering System (JES)
 
+> **JES is an engineering system validated by incremental implementation.**
+
 A tool-independent engineering methodology for human–AI collaborative software development.
 
 ---
@@ -43,13 +45,29 @@ Projects consume JES. They do not contain it.
 
 ---
 
+## Current phase
+
+```text
+Core (v1.2) — maintenance mode
+   ↓
+Cursor validation — done through Implement
+   ↓
+Ecosystem — consolidate Cursor, then second integration (Claude Code / P6)
+```
+
+Constitutional Core rule: `validation/CORE_MAINTENANCE.md`  
+Operation evidence: `validation/MATRIX.md`  
+Ecosystem roadmap: `validation/MILESTONE_ecosystem_phase.md`
+
+---
+
 ## Version
 
 Current: **v1.2** — Executable engineering core  
-Status: Stable core (implementation-driven evolution from here)
+Status: **Core in maintenance** — validated by incremental implementation; evolve only on failed matrix cells or failed second-integration proof
 
 See `CHANGELOG.md` for release notes.
 
 ---
 
-*JARVIS Engineering System — July 2026*
+*JARVIS Engineering System — August 2026*

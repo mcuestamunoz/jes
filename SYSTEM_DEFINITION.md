@@ -12,6 +12,8 @@
 
 The JARVIS Engineering System (JES) is an engineering system designed to organize, coordinate, and govern the development of complex projects through structured collaboration between an engineer and multiple AI agents.
 
+> **JES is an engineering system validated by incremental implementation.**
+
 JARVIS is the main project developed under JES, but not the only one.
 
 It is not a set of tools.  
@@ -24,7 +26,7 @@ JES develops the way software is developed.
 
 It is a system with active responsibilities that governs how decisions are made, how work is coordinated between the engineer and AI agents, and how project knowledge is preserved over time.
 
-JES exists because building complex systems with AI as a collaborator requires more than good intentions. It requires structure.
+JES exists because building complex systems with AI as a collaborator requires more than good intentions. It requires structure — and that structure must survive contact with real Operations and real tools.
 
 ---
 

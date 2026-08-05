@@ -21,6 +21,17 @@ Matrix framing: architectural validation suite (Operation → validates Core / k
 Governance: fill the matrix; Core changes require a failed matrix cell.  
 After Implement without Core edits: Core validated for knowledge **and** transformation operations.
 
+### Phase shift (2026-08-05) — Ecosystem
+
+**Positioning:** JES is an engineering system validated by incremental implementation.
+
+**Constitutional rule:** Core enters **maintenance mode** (`validation/CORE_MAINTENANCE.md`).  
+No anticipatory Core concepts; no aesthetic reshuffles; Core edits only on failed Operation contract or failed second-integration (tool-agnostic) proof.
+
+**Next strategic milestone:** second integration (**Claude Code**) to validate **P6 Replaceable Tools** empirically — not a larger Operation catalog.
+
+Evidence: `validation/MILESTONE_ecosystem_phase.md`, `integrations/README.md`.
+
 ### Added
 
 - Engineering Cognition (`docs/02.5_ENGINEERING_COGNITION.md`)
@@ -41,8 +52,9 @@ After Implement without Core edits: Core validated for knowledge **and** transfo
 
 ### Discipline
 
-- Do not modify Core unless a real implementation demonstrates a Core limitation.
-- Next phase: validate the full pipeline with a minimal Cursor integration.
+- Core is in **maintenance mode** (`validation/CORE_MAINTENANCE.md`).
+- Do not modify Core unless a matrix cell fails or a second integration falsifies tool-agnosticism.
+- Next strategic focus: ecosystem — consolidate Cursor, then Claude Code / P6.
 
 ## v1.1 — 2026-07-28
 

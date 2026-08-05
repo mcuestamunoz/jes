@@ -23,9 +23,13 @@ They define expected behavior of the pipeline so Runtime / Selection / Operation
 Also see:
 
 - `MATRIX.md` — operation validation matrix
+- `CORE_MAINTENANCE.md` — Core constitutional maintenance mode
 - `MILESTONE_core_v12_first_implementation.md`
+- `MILESTONE_core_validated_read_and_transform.md`
+- `MILESTONE_ecosystem_phase.md`
 
 Rule:
 
-> Each new Operation must land without Core edits (`02.5`–`02.7`, `08`, `09`) unless a true Core defect is proven.
+> Each new Operation must land without Core edits (`02.5`–`02.7`, `08`, `09`) unless a true Core defect is proven.  
+> Core is in maintenance mode — see `CORE_MAINTENANCE.md`.
 

@@ -21,22 +21,18 @@ Measurable question:
 
 > **How many Operations can be implemented without modifying the Core?**
 
-## Governance rule
+## Core maintenance (constitutional)
 
-> The nature of the project is to **fill this matrix**, not invent architecture.
+> **The Core is in maintenance mode.** See `CORE_MAINTENANCE.md`.
 
-Any future Core change must answer:
+No new Core concepts by anticipation. No aesthetic reshuffles.  
+Core changes only if (1) an Operation cannot honor the contract, or (2) a second integration falsifies tool-agnosticism.
+
+Any proposed Core edit must answer:
 
 > **Which matrix cell failed to justify this change?**
 
-If no cell failed, there is probably no reason to modify Core.
-
-Additional rule:
-
-> Every new Operation must attempt implementation without Core edits.  
-> If blocked, diagnose Core defect vs Operation defect before changing Core.
-
-Core files under protection:
+Protected:
 
 - `docs/02.5_ENGINEERING_COGNITION.md`
 - `docs/02.6_ENGINEERING_STATE.md`
@@ -58,7 +54,7 @@ Core files under protection:
 | Validate | Validate | Validation + Closure evidence | ⏳ | — |
 | Document | Communicate consequence | Knowledge persistence | ⏳ | — |
 
-## Preferred fill order
+## Fill strategy (ecosystem phase)
 
 ```text
 Research  ✅
@@ -66,21 +62,28 @@ Review    ✅
 Explain   ✅
 Analyze   ✅
 Plan      ✅
-Implement ✅   ← first mutating Operation
-Refactor
+Implement ✅
+Refactor  ← minimal useful remainder (optional before P6)
+Validate  ← if still needed for closure path
 ```
 
-Implement criterion:
+Do **not** prioritize a huge Operation catalog.  
+Next strategic proof is a **second integration** (Claude Code) for empirical **P6**.
+
+Implement criterion (held):
 
 > Does Implement modify **only** what the Execution Plan authorizes within scope?
 
-## Claim (after Implement)
+## Claim
 
-If Implement lands without Core edits, the Core is validated against **knowledge** and **transformation** operations — not only designed.
+> JES is an engineering system validated by incremental implementation.
 
-Project focus then shifts toward catalog growth, integrations, and matrix evidence — with Core as stable base.
+Core validated for knowledge and transformation Operations inside Cursor.  
+P6 remains theoretically stated until a second runtime reuses the same contracts.
 
-## Milestone
+## Milestones
 
-See `MILESTONE_core_v12_first_implementation.md` and  
-`MILESTONE_core_validated_read_and_transform.md`.
+- `MILESTONE_core_v12_first_implementation.md`
+- `MILESTONE_core_validated_read_and_transform.md`
+- `MILESTONE_ecosystem_phase.md`
+- `CORE_MAINTENANCE.md`
