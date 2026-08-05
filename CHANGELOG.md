@@ -47,6 +47,11 @@ v2.0  (future) Core validated across independent integrations
 
 Evidence: `validation/MILESTONE_v13_first_implementation_validation.md`, `validation/MATRIX.md`
 
+### Post-release hygiene (2026-08-05)
+
+Removed empty pre-validation stubs (`prompts/`, `rules/`, `templates/`, `workflows/` at repo root; empty Cursor `commands/`/`prompts/`/`rules/`/`skills/`/`subagents/`).  
+Filled `docs/00_INTRODUCTION.md`. Reintroduce tool folders only when Field Notes justify them (**P9**).
+
 ## v1.2 — 2026-07-31
 
 Executable engineering core: cognition, live state, lifecycle, and operation selection.

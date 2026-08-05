@@ -1,7 +1,7 @@
 # JES — Rules
 
 > This document defines what a rule is in JES and lists foundational rules.  
-> Domain-specific rules evolve in `rules/`.  
+> Domain-specific rules evolve in the adopting project or integration when needed.  
 > No rule may contradict `01_PRINCIPLES.md`.
 
 ---

@@ -361,9 +361,10 @@ Cursor does not redefine selection semantics.
 | `FOUNDATION.md` | baseline behavioral contract |
 | `OPERATING_MODEL.md` | Intent → Interpretation → Execution translation |
 | `RUNTIME.md` (this file) | how JES cycles/state/lifecycle live inside Cursor |
-| `commands/` | future operation triggers |
-| `prompts/` | future operation implementations |
-| `policies/` | future Cursor-specific policy adapters |
+| `runtime/` | materialization tools (state, selection, operations) |
+| `policies/` | Cursor-specific policy adapters |
+
+`commands/` / `prompts/` / `skills/` / `subagents/` are **not** present until Field Notes justify them.
 
 ---
 

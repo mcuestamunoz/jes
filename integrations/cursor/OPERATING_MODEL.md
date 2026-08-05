@@ -6,7 +6,7 @@ It sits between:
 
 - `FOUNDATION.md` (behavioral contract)
 - `RUNTIME.md` (how cycles/state/lifecycle live in Cursor)
-- `commands/` and `prompts/` (operational implementation)
+- `commands/` and `prompts/` (optional later materialization; not required for Runtime v0)
 
 ## Purpose
 
@@ -192,10 +192,8 @@ Cursor must stop and ask before proceeding when any of the following is true:
 - `../../docs/02.7_ENGINEERING_STATE_LIFECYCLE.md` defines state create/evolve/persist/end behavior.
 - `../../docs/08_ENGINEERING_OPERATIONS.md` defines the shared JES operation set.
 - `../../docs/09_OPERATION_SELECTION.md` defines how the next available operation is selected.
-- `rules/` constrain specific Cursor behavior.
-- `prompts/` implement operation behavior (one-to-many mapping allowed).
-- `commands/` trigger operations.
-- `skills/` and `subagents/` provide reusable specialization.
+- `runtime/` and `policies/` materialize state, selection, and operations for Cursor v0.
+- Optional later folders (`commands/`, `prompts/`, `skills/`, `subagents/`) only when Field Notes justify them.
 
 ## Non-Goals
 
