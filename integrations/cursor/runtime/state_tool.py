@@ -173,6 +173,8 @@ def infer_initial_mode(cycle_intent: str) -> str:
         return "Validate"
     if any(k in t for k in ("implement", "fix", "add ", "create code")):
         return "Build"
+    if any(k in t for k in ("analyze", "analysis", "constraints", "risks", "mental model")):
+        return "Model"
     if any(k in t for k in ("compare", "propose", "design", "alternative")):
         return "Design"
     if any(k in t for k in ("plan", "break down", "tasks")):

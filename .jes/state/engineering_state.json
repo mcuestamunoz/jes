@@ -1,16 +1,20 @@
 {
   "schema_version": "1.0",
-  "cycle_intent": null,
+  "cycle_intent": "Analyze constraints and risks for Operation Selection in the Cursor integration.",
   "scope": null,
-  "execution_status": "idle",
-  "current_mode": null,
+  "execution_status": "active",
+  "current_mode": "Model",
   "movement_trigger": null,
   "relevant_workflow_phases": [],
   "applicable_rules": [],
-  "required_artifacts": [],
-  "open_questions": [],
+  "required_artifacts": [
+    "Mental Model (.jes/artifacts/mental_model.md)"
+  ],
+  "open_questions": [
+    "scope not yet bounded"
+  ],
   "active_operation": null,
   "authority_gates": [],
   "coherence_checklist": null,
-  "updated_at": "2026-08-05T16:55:45Z"
+  "updated_at": "2026-08-05T17:06:42Z"
 }
