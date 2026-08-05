@@ -31,7 +31,8 @@ Correct framing for daily use:
 > The Engineer opens Cursor to **start (or resume) an engineering cycle**.  
 > They never need to name Operations; JES translates intent into Selection and execution.
 
-The full Engineer Interface (how that conversation feels day to day) is Phase 3 — see `../../validation/PHASE_3_ENGINEERING_WORKFLOW.md`.
+Phase 3 discovers that daily flow by **building Jarvis with JES** and logging friction in `../../validation/FIELD_NOTES.md`.  
+The Engineer Interface is designed later from those notes — see `../../validation/PHASE_3_ENGINEERING_WORKFLOW.md`.
 
 The Engineer must not need to manage Modes, status enums, or state files manually for normal work.
 

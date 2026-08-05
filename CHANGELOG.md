@@ -41,7 +41,7 @@ v2.0  (future) Core validated across independent integrations
 
 ### Explicitly out of scope for v1.3
 
-- Engineer Interface / daily experience (Phase 3 — design opens after this release)
+- Designing the Engineer Interface up front (Phase 3 discovers it via Jarvis practice + Field Notes)
 - Second integration / empirical P6
 - Large Operation catalog expansion
 

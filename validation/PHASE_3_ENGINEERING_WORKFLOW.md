@@ -1,126 +1,110 @@
 # Phase 3 — Engineering Workflow in Practice
 
-> **Status: design opened (discovery captured). Not implemented.**  
-> Opens after JES v1.3. Does **not** modify Core yet (maintenance mode).
+> **Status: practice phase — discovery through real work.**  
+> Not an interface-design sprint. Core stays in maintenance mode.
 
-## Discovery
+## Correct objective
 
-The opening act is not:
+Not:
 
-> Open Cursor to ask for code.
+> Design the Engineer Interface.
 
-It is:
+But:
 
-> **Open Cursor to start an engineering cycle.**
+> **Discover the Engineer’s real workflow by using JES while building real projects (starting with Jarvis).**
 
-| Improvisation (today) | JES (target) |
+The interface will be designed later — from field evidence, not brainstorming.
+
+## How to work from tomorrow
+
+Treat JES as already real. Start sessions with a Cycle Intent, not with Operation names:
+
+```text
+Project: Jarvis
+
+Cycle Intent:
+Implementar el sistema de simulación aerodinámica.
+
+Expected Outcome:
+El sistema es capaz de simular un dron con un modelo inicial de fuerzas.
+
+Scope:
+simulation_engine/*
+```
+
+Then work as an engineer:
+
+| You say | JES should tend toward |
 |---|---|
-| “Hazme un planner” | State a Cycle Intent |
-| Name Operations (`Research`, `Plan`…) | Speak goals and judgments |
-| Conversation drift | Interpretation → State → Selection → Operation |
-| Talk to the IDE | Work with **JES** (tool is a carrier) |
+| “No entiendo cómo modelar la resistencia del aire.” | Research / Explore |
+| “Este modelo es demasiado complejo.” | Design / Model |
+| “Me convence la opción B.” | Decide (+ authority) |
+| “Vamos a implementarla.” | Plan → Implement |
 
-The Engineer never needs to know that Research or Implement exist.  
-They say what they want to achieve; JES translates.
+You do **not** type `Research`, `Plan`, or `Build`.
 
-## Seed examples (intent language)
+## Dual output of every Jarvis hour
 
-```text
-Quiero que Jarvis optimice configuraciones de drones mediante DSE.
-```
+1. Progress on **Jarvis**
+2. Evidence for **JES** (what the Engineer needed and lacked)
 
-```text
-Vale. Diseñemos la arquitectura del DSE.
-```
+Those are not two projects. One feeds the other.
 
-```text
-Me convence esta arquitectura.
-```
+## Evidence instrument
+
+`FIELD_NOTES.md` — short dated entries from real friction.
+
+Example shape:
 
 ```text
-Perfecto. Implementémosla.
+Fecha
+
+Proyecto:
+Jarvis
+
+Problema observado:
+He perdido el contexto después de dos días.
+
+Consecuencia:
+He tardado 20 minutos en volver a situarme.
+
+Idea:
+JES debería resumir automáticamente el estado al restaurar un ciclo.
 ```
+
+No note → no interface feature. (**P9**)
+
+## Roadmap position
 
 ```text
-Creo que estamos atascados.
+JES Core                 ✅
+Cursor Runtime           ✅
+        ↓
+Develop Jarvis with JES  ← here
+        ↓
+Daily Field Notes
+        ↓
+Consolidate personal flow
+        ↓
+Design Engineer Interface (from evidence)
+        ↓
+JES Desktop (voice, HUD, projector…) — much later
 ```
 
-```text
-Continuemos.
-```
+## What Phase 3 deliberately does not do yet
 
-These carry **intention**, not implementation recipes.
+- Invent HUD / voice / Desktop UX
+- Add Core concepts by anticipation
+- Add a second integration
+- Teach the Engineer to name Operations
 
-## What already exists (internal machinery)
+## Success signal
 
-```text
-Cycle Intent → Interpretation → Engineering State → Cognition/Mode
-    → Operation Selection → Operation → Artifacts / State Update
-```
+After sustained Jarvis work, Field Notes contain recurring needs (context restore, open questions, blockers, “where are we?”).  
+Those recurrences become the input to interface design — not the other way around.
 
-v1.3 validated that pipeline inside Cursor without Core edits.
+## Related
 
-## What is missing (external face)
-
-> **How does the Engineer converse with JES?**
-
-Not with Cursor. With JES.
-
-Until now the architecture answered an **internal** question:
-
-> How does the system work?
-
-It has not fully answered the **external** one:
-
-> What is the Engineer’s daily experience?
-
-That experience is the entrance to JES. If it is natural, the Engineer does not think about Modes, State, or Operations — they work, and JES does the rest.
-
-## Design object of Phase 3
-
-**Engineer Interface** — the conversational contract between Engineer and JES.
-
-Candidate concerns (to design from practice, not invent wholesale):
-
-1. How a day starts (arrive → Cycle Intent → first response)
-2. Intent language vs Operation language (forbidden: requiring the Engineer to name ops)
-3. How progress is felt (HUD-like presence vs invisible State)
-4. How Mode/Operation changes are announced without jargon overload
-5. How authority gates appear in conversation (“I need your decision”)
-6. How a session ends / cycle pauses / cycle closes
-7. Belonging: which interface rules are Core (tool-agnostic) vs integration chrome
-
-## Method
-
-Same rigor as Core validation:
-
-```text
-Hypothesis: intent-language dialogue is enough for daily engineering.
-     ↓
-Practice: develop JARVIS speaking only in intentions.
-     ↓
-Evidence: field notes (friction, missing cues, unwanted Operation leakage).
-     ↓
-Conclusion: specify Engineer Interface; only then touch Core if a cell fails.
-```
-
-## Non-goals (for now)
-
-- No new Core concepts by anticipation
-- No second integration
-- No prompt pack that teaches the Engineer to type `Research`
-- No full UX chrome invention before practice evidence
-
-## Day loop (target sketch — not final)
-
-```text
-Arrive
-  → state Cycle Intent (goal, not op name)
-  → JES interprets / selects / runs
-  → Engineer judges, redirects, approves, continues
-  → session ends with State persistable for tomorrow
-```
-
-## Open question for design
-
-> What must the Engineer say — and what must they never have to say — for JES to remain the system of work rather than a chat wrapper around an IDE?
+- Field log: `FIELD_NOTES.md`
+- Core freeze: `CORE_MAINTENANCE.md`
+- v1.3 closed: `MILESTONE_v13_first_implementation_validation.md`

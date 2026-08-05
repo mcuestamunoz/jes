@@ -57,8 +57,8 @@ Constitutional Core rule: `validation/CORE_MAINTENANCE.md`
 Release evidence: `validation/MILESTONE_v13_first_implementation_validation.md`  
 Matrix: `validation/MATRIX.md`
 
-Next phase (design opened): `validation/PHASE_3_ENGINEERING_WORKFLOW.md`  
-— Engineer Interface: converse with **JES** in intentions, not Operation names.
+Next phase (in practice): `validation/PHASE_3_ENGINEERING_WORKFLOW.md`  
+— Discover real Engineer workflow by building Jarvis with JES; log friction in `validation/FIELD_NOTES.md`.
 
 See `CHANGELOG.md` for release notes.
 

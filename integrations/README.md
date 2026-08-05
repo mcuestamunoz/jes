@@ -14,7 +14,7 @@ Core contracts stay tool-agnostic. Integrations declare Available Operations and
 
 | Integration | Status | Notes |
 |---|---|---|
-| Claude Code (or other) | Not started | Only after Phase 3 workflow evidence shows a real gap (`../validation/PHASE_3_ENGINEERING_WORKFLOW.md`) |
+| Claude Code (or other) | Not started | Only after Field Notes show a demonstrated gap (`../validation/FIELD_NOTES.md`) |
 
 ## Rules
 

@@ -46,8 +46,8 @@ If no cell failed, there is no Core change.
 
 ## What continues outside Core (after v1.3)
 
-- Minimal useful Operations remainder when experience justifies it
-- Cursor consolidation
-- **Phase 3** — Engineering Workflow in Practice (`PHASE_3_ENGINEERING_WORKFLOW.md`)
-- Multi-tool ecosystem only from demonstrated gaps (**P9**)
-- Empirical P6 only if a second runtime is justified
+- Develop Jarvis **with** JES (intent language, not Operation names)
+- Record friction in `FIELD_NOTES.md`
+- Consolidate personal flow from those notes
+- Design Engineer Interface only from demonstrated needs (**P9**)
+- Multi-tool / P6 only if practice shows a real gap

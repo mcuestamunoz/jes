@@ -90,4 +90,5 @@ P6 / second integration remain later; **Phase 3** (daily engineer workflow) open
 - `MILESTONE_core_validated_read_and_transform.md`
 - `MILESTONE_ecosystem_phase.md`
 - `CORE_MAINTENANCE.md`
-- `PHASE_3_ENGINEERING_WORKFLOW.md` — Engineer Interface / daily experience (design opened)
+- `PHASE_3_ENGINEERING_WORKFLOW.md` — discover real workflow via Jarvis practice
+- `FIELD_NOTES.md` — daily evidence log (interface designed from this later)

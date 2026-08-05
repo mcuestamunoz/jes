@@ -1,35 +1,33 @@
 # Milestone — After v1.3 (sequence reminder)
 
-## What this milestone closes
+## Closed
 
 PR #3 / tag `v1.3`: Core validated + first Cursor materialization.
 
-## What opens next
+## Current
 
 ```text
-Phase 3 — Engineering Workflow in Practice
-         (Engineer Interface with JES)
+Develop Jarvis with JES
+        ↓
+Record Field Notes (validation/FIELD_NOTES.md)
 ```
+
+Phase 3 objective:
+
+> Discover the Engineer’s real workflow by practice — then design the interface from evidence.
 
 See `PHASE_3_ENGINEERING_WORKFLOW.md`.
 
-Discovery already captured there:
-
-> You do not open the tool to request code.  
-> You open it to start an engineering cycle — and speak in intentions.
-
-## Deferred still
-
-- Second integration / empirical P6
-- Large Operation catalog
-
-## Near-term order
+## Later (not now)
 
 ```text
-v1.3 closed                         ✅
-Phase 3 Engineer Interface design   ← now
-Operations v1 remainder / Cursor polish as practice demands
-Second integration                  ← only if practice justifies it (P9)
+Consolidate personal flow
+        ↓
+Design Engineer Interface (from Field Notes)
+        ↓
+JES Desktop (voice, HUD, projector…)
+        ↓
+Second integration / P6   — only if practice shows a real gap
 ```
 
 ## v2.0 gate (unchanged)
