@@ -25,4 +25,16 @@ Idea:
 
 ## Entries
 
-_(none yet — fill while developing Jarvis with JES)_
+## 2026-08-05 — stub hygiene
+
+Proyecto:
+JES
+
+Problema observado:
+Carpetas y `.md` vacíos (`prompts/`, `rules/`, `templates/`, `workflows/`, skeleton Cursor) daban falsa sensación de madurez.
+
+Consecuencia:
+Parecía que faltaba “rellenar” artefactos; en realidad no había contrato ni evidencia que los exigiera.
+
+Idea:
+Solo existe lo que el contrato o Field Notes exigen (P9). Stubs vacíos eliminados; `commands/`/`prompts` Cursor se reintroducen solo con necesidad demostrada.
