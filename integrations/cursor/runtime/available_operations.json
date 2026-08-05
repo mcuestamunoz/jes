@@ -4,7 +4,8 @@
     "Research",
     "Review",
     "Explain",
-    "Analyze"
+    "Analyze",
+    "Plan"
   ],
-  "notes": "Non-destructive ops first. Each must validate distinct Core facets without Core edits."
+  "notes": "Non-destructive ops first. Plan is transformation-prep (no repo mutation). Each op must validate distinct Core facets without Core edits."
 }

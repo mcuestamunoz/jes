@@ -171,14 +171,15 @@ def infer_initial_mode(cycle_intent: str) -> str:
     t = cycle_intent.strip().lower()
     if any(k in t for k in ("review", "validate", "check")):
         return "Validate"
+    # Plan before Build: "Plan the implementation..." must not become Build.
+    if any(k in t for k in ("plan", "break down", "tasks", "execution plan")):
+        return "Plan"
     if any(k in t for k in ("implement", "fix", "add ", "create code")):
         return "Build"
     if any(k in t for k in ("analyze", "analysis", "constraints", "risks", "mental model")):
         return "Model"
     if any(k in t for k in ("compare", "propose", "design", "alternative")):
         return "Design"
-    if any(k in t for k in ("plan", "break down", "tasks")):
-        return "Plan"
     if any(k in t for k in ("model", "entities", "domain")):
         return "Model"
     return "Explore"

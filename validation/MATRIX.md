@@ -2,11 +2,22 @@
 
 ## Success metric
 
-Old question:
+Old framing:
 
-> Is JES well designed?
+```text
+Core → ¿Se puede implementar?
+```
 
-Current measurable question:
+Current framing (architectural validation suite):
+
+```text
+Operation
+   → ¿Valida el Core?
+   → ¿Mantiene el contrato?
+   → ¿Produce el artefacto correcto?
+```
+
+Measurable question:
 
 > **How many Operations can be implemented without modifying the Core?**
 
@@ -41,7 +52,7 @@ Core files under protection:
 | Review | Validate | Validation + Evidence + Selection | No | `scenario_006` |
 | Explain | Explore | Communication + Understanding | No | `scenario_007` |
 | Analyze | Model | Mental Model + Reasoning | No | `scenario_008` |
-| Plan | Plan | Planning + Workflow | ⏳ | — |
+| Plan | Plan | State + Selection + Workflow + Required Artifacts + Scope + Open Questions + Authority Gates | No | `scenario_009` |
 | Implement | Build | Build + Lifecycle + Validation | ⏳ | — |
 | Refactor | Build | Build + Constraints | ⏳ | — |
 | Validate | Validate | Validation + Closure evidence | ⏳ | — |
@@ -54,13 +65,13 @@ Research  ✅
 Review    ✅
 Explain   ✅
 Analyze   ✅
-Plan
+Plan      ✅
 Implement
 Refactor
 ```
 
-Rationale: first operations stress Cognition/State/Selection/Lifecycle without repository mutation.  
-`Implement` comes only after the non-destructive path is solid.
+Rationale: knowledge ops first, then Plan as the bridge that turns approved intent into verifiable work **without** mutating the repository.  
+`Implement` comes only after that bridge holds.
 
 ## Milestone
 

@@ -15,7 +15,8 @@ Runtime + Operation Selection + Research completed the full live pipeline withou
 
 Evidence: `validation/MILESTONE_core_v12_first_implementation.md`, `validation/MATRIX.md`, scenarios 001–005.
 
-Matrix fill (non-destructive, Core untouched): Review (`scenario_006`), Explain (`scenario_007`), Analyze (`scenario_008`).  
+Matrix fill (non-destructive, Core untouched): Review (`scenario_006`), Explain (`scenario_007`), Analyze (`scenario_008`), Plan (`scenario_009`).  
+Matrix framing: architectural validation suite (Operation → validates Core / keeps contract / correct artifact).  
 Governance: fill the matrix; Core changes require a failed matrix cell.
 
 ### Added

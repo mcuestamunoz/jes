@@ -1,20 +1,24 @@
 {
   "schema_version": "1.0",
-  "cycle_intent": "Analyze constraints and risks for Operation Selection in the Cursor integration.",
-  "scope": null,
+  "cycle_intent": "Plan the implementation of Operation Selection documentation updates in Cursor runtime.",
+  "scope": "integrations/cursor docs and validation scenarios only",
   "execution_status": "active",
-  "current_mode": "Model",
+  "current_mode": "Plan",
   "movement_trigger": null,
-  "relevant_workflow_phases": [],
+  "relevant_workflow_phases": [
+    "Intent",
+    "Design",
+    "Plan"
+  ],
   "applicable_rules": [],
   "required_artifacts": [
-    "Mental Model (.jes/artifacts/mental_model.md)"
+    "Execution Plan (.jes/artifacts/execution_plan.md)",
+    "Change (future Build — not produced by Plan)",
+    "Evidence (future Validate — not produced by Plan)"
   ],
-  "open_questions": [
-    "scope not yet bounded"
-  ],
+  "open_questions": [],
   "active_operation": null,
   "authority_gates": [],
   "coherence_checklist": null,
-  "updated_at": "2026-08-05T17:06:42Z"
+  "updated_at": "2026-08-05T17:12:38Z"
 }

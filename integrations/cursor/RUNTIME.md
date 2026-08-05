@@ -139,14 +139,16 @@ Non-destructive operations that fill the validation matrix without Core edits.
 | Review | Validate | `.jes/artifacts/evidence.md` | `scenario_006` |
 | Explain | Explore | `.jes/artifacts/explanation.md` | `scenario_007` |
 | Analyze | Model | `.jes/artifacts/mental_model.md` | `scenario_008` |
+| Plan | Plan | `.jes/artifacts/execution_plan.md` | `scenario_009` |
 
 Artifacts:
 
-- `runtime/review.py`, `runtime/explain.py`, `runtime/analyze.py`
-- `policies/review_v0.md`, `policies/explain_v0.md`, `policies/analyze_v0.md`
+- `runtime/review.py`, `runtime/explain.py`, `runtime/analyze.py`, `runtime/plan.py`
+- `policies/review_v0.md`, `policies/explain_v0.md`, `policies/analyze_v0.md`, `policies/plan_v0.md`
 - `../../validation/MATRIX.md`
 
-Available Operations catalog grows only to validate distinct Core facets.
+Available Operations catalog grows only to validate distinct Core facets.  
+Plan is the first transformation-prep op: full State consumption, no repository mutation.
 
 ---
 

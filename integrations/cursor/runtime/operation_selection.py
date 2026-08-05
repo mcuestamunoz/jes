@@ -21,6 +21,7 @@ MODE_COMPAT = {
     "Review": {"Validate"},
     "Explain": {"Explore"},
     "Analyze": {"Model"},
+    "Plan": {"Plan"},
 }
 
 
@@ -98,6 +99,19 @@ def advances_cycle_intent(op: str, state: dict, user_message: str | None) -> boo
                 "evaluate scope",
             )
         )
+
+    if op == "Plan":
+        if mode not in MODE_COMPAT["Plan"]:
+            return False
+        if not any(k in text for k in ("plan", "break down", "tasks", "execution plan")):
+            return False
+        # Plan transforms an approved, bounded objective — it does not invent scope.
+        if not state.get("scope"):
+            return False
+        # Pending gates mean Decide is not closed; Plan must not proceed.
+        if state.get("authority_gates"):
+            return False
+        return True
 
     if op == "Research":
         if mode not in MODE_COMPAT["Research"]:
