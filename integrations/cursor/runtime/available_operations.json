@@ -1,0 +1,7 @@
+{
+  "integration": "cursor",
+  "available_operations": [
+    "Research"
+  ],
+  "notes": "Paso 2 minimal catalog. Expand only after Selection + Research e2e works."
+}

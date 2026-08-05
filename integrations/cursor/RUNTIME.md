@@ -83,6 +83,34 @@ Out of scope for v0:
 
 Pass scenarios 001–003 before advancing to Selection / Research.
 
+## Selection v0 (current materialization)
+
+Minimal Operation Selection against a one-item catalog:
+
+```text
+Available Operations = [Research]
+```
+
+Artifacts:
+
+- `runtime/operation_selection.py`
+- `runtime/available_operations.json`
+- `policies/operation_selection_v0.md`
+- `../../validation/scenario_004.md`
+
+Behavior:
+
+- coherent state (e.g. Explore) → `selected` / `Research`
+- incoherent state (e.g. Build) → `unavailable` (no improvisation)
+
+Still out of scope:
+
+- executing Research
+- ranking / scoring
+- multi-operation catalogs
+
+Core files must remain untouched unless a real limitation appears.
+
 ---
 
 ## Dual persistence model
