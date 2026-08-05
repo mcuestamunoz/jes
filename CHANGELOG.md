@@ -2,40 +2,54 @@
 
 All notable changes to the JARVIS Engineering System (JES) are documented in this file.
 
-## v1.2 — 2026-07-31
+## v1.3 — 2026-08-05
 
-Executable engineering core: cognition, live state, lifecycle, and operation selection.  
-Core growth pauses unless real implementation exposes a limitation.
+**JES v1.3 — First Incremental Implementation Validation**
 
-### Implementation validation (2026-08-05)
+Demonstrates that the v1.2 Core can be materialized end-to-end in Cursor without modifying Core contracts.  
+Validation level changed; product nature did not (still one integration). **v2.0** is reserved for multi-integration portability (P6 proven).
 
-**Milestone: JES Core v1.2 — First Implementation Validation**
-
-Runtime + Operation Selection + Research completed the full live pipeline without modifying Core contracts (`02.5`–`02.7`, `08`, `09`).
-
-Evidence: `validation/MILESTONE_core_v12_first_implementation.md`, `validation/MATRIX.md`, scenarios 001–005.
-
-Matrix fill (Core untouched): Review (`006`), Explain (`007`), Analyze (`008`), Plan (`009`), Implement (`010`).  
-Implement criterion: mutate **only** what the Execution Plan authorizes within scope.  
-Matrix framing: architectural validation suite (Operation → validates Core / keeps contract / correct artifact).  
-Governance: fill the matrix; Core changes require a failed matrix cell.  
-After Implement without Core edits: Core validated for knowledge **and** transformation operations.
-
-### Phase shift (2026-08-05) — Ecosystem (sequence corrected)
-
-**Positioning:** JES is an engineering system validated by incremental implementation.
-
-**Constitutional rule:** Core enters **maintenance mode** (`validation/CORE_MAINTENANCE.md`).  
-No anticipatory Core concepts; no aesthetic reshuffles; Core edits only on failed Operation contract or failed second-integration (tool-agnostic) proof.
-
-**Near-term order (not Claude Code yet):**
+### Version lineage
 
 ```text
-Operations v1 (minimal) → Cursor consolidated → Personal workflow evidence → then maybe a second tool
+v1.0  Foundation
+v1.1  Architecture refinement
+v1.2  Execution model (Cognition + State + Selection)
+v1.3  First implementation validation   ← this release
+v2.0  (future) Core validated across independent integrations
 ```
 
-P6 / Claude Code remain a **later** empirical gate. Adding a second tool now would skip role definition (**P9 Justified Complexity**).  
-Field notes: `validation/PERSONAL_WORKFLOW.md`. Sequence: `validation/MILESTONE_ecosystem_phase.md`.
+### Added (Cursor materialization)
+
+- Cursor Runtime v0 (Interpretation, Engineering State persist/restore, HUD, Lifecycle `move`)
+- Operation Selection v0 (integration-declared Available Operations)
+- Operations: Research, Review, Explain, Analyze, Plan, Implement
+- Validation scenarios `001`–`010` and architectural validation matrix
+- Core maintenance policy (`validation/CORE_MAINTENANCE.md`)
+- Project-owned `.jes/state/` and `.jes/artifacts/`
+
+### Validated
+
+- Knowledge and transformation Operations against Core without Core edits
+- Implement criterion: mutate only what the Execution Plan authorizes within scope
+- Positioning: *JES is an engineering system validated by incremental implementation*
+
+### Governance
+
+- Core enters **maintenance mode**
+- Core changes only if an Operation cannot honor the contract, or a later second integration falsifies tool-agnosticism
+
+### Explicitly out of scope for v1.3
+
+- Personal daily workflow (Phase 3 — opens after this release)
+- Second integration / empirical P6
+- Large Operation catalog expansion
+
+Evidence: `validation/MILESTONE_v13_first_implementation_validation.md`, `validation/MATRIX.md`
+
+## v1.2 — 2026-07-31
+
+Executable engineering core: cognition, live state, lifecycle, and operation selection.
 
 ### Added
 
@@ -43,8 +57,7 @@ Field notes: `validation/PERSONAL_WORKFLOW.md`. Sequence: `validation/MILESTONE_
 - Engineering State contract (`docs/02.6_ENGINEERING_STATE.md`)
 - Engineering State Lifecycle (`docs/02.7_ENGINEERING_STATE_LIFECYCLE.md`)
 - Operation Selection (`docs/09_OPERATION_SELECTION.md`)
-- Cursor Runtime materialization (`integrations/cursor/RUNTIME.md`)
-- Project-owned state persistence location (`.jes/state/`)
+- Cursor Runtime contract sketch (`integrations/cursor/RUNTIME.md`)
 - Core vs integration belonging criterion in Architecture / Cursor Foundation
 
 ### Changed
@@ -57,9 +70,7 @@ Field notes: `validation/PERSONAL_WORKFLOW.md`. Sequence: `validation/MILESTONE_
 
 ### Discipline
 
-- Core is in **maintenance mode** (`validation/CORE_MAINTENANCE.md`).
-- Do not modify Core unless a matrix cell fails or a second integration falsifies tool-agnosticism.
-- Near-term focus: minimal Operations, Cursor consolidation, personal workflow evidence — not a second tool by default.
+- Do not modify Core unless a real implementation demonstrates a Core limitation.
 
 ## v1.1 — 2026-07-28
 

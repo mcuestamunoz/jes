@@ -44,10 +44,10 @@ Any proposed Core edit must answer:
 
 If no cell failed, there is no Core change.
 
-## What continues outside Core
+## What continues outside Core (after v1.3)
 
-- Finish a minimal useful Operation set when experience justifies it
-- Consolidate Cursor as the primary daily path
-- Discover personal workflow via field notes (`PERSONAL_WORKFLOW.md`)
-- Design multi-tool ecosystem only from demonstrated gaps (**P9**)
-- Empirically validate P6 later — via a second runtime — only if that gap is real
+- Minimal useful Operations remainder when experience justifies it
+- Cursor consolidation
+- **Phase 3** — Engineering Workflow in Practice (`PHASE_3_ENGINEERING_WORKFLOW.md`)
+- Multi-tool ecosystem only from demonstrated gaps (**P9**)
+- Empirical P6 only if a second runtime is justified

@@ -37,7 +37,7 @@ Projects that adopt JES declare the version they use:
 engineering:
   methodology:
     name: JES
-    version: "1.2"
+    version: "1.3"
 ```
 
 The methodology remains independent of any specific project.  
@@ -45,28 +45,19 @@ Projects consume JES. They do not contain it.
 
 ---
 
-## Current phase
-
-```text
-JES Core v1.2        ✅  maintenance mode
-Cursor Runtime       ✅
-Operations v1        ⏳  minimal useful set
-Cursor consolidated  ⏳
-Personal workflow    ⏳  field notes from real JARVIS work
-Second integration   ← later, only if evidence justifies it (P9)
-```
-
-Constitutional Core rule: `validation/CORE_MAINTENANCE.md`  
-Operation evidence: `validation/MATRIX.md`  
-Phase sequence: `validation/MILESTONE_ecosystem_phase.md`  
-Field notes: `validation/PERSONAL_WORKFLOW.md`
-
----
-
 ## Version
 
-Current: **v1.2** — Executable engineering core  
-Status: **Core in maintenance** — validated by incremental implementation; next work is Cursor consolidation and personal workflow discovery, not a second tool by default
+Current: **v1.3** — First Incremental Implementation Validation  
+Status: Core in **maintenance mode**; first Cursor end-to-end validation complete without Core changes
+
+Lineage: `v1.0` Foundation → `v1.1` Architecture → `v1.2` Execution model → **`v1.3` Implementation validation**  
+(`v2.0` reserved for multi-integration portability.)
+
+Constitutional Core rule: `validation/CORE_MAINTENANCE.md`  
+Release evidence: `validation/MILESTONE_v13_first_implementation_validation.md`  
+Matrix: `validation/MATRIX.md`
+
+Next phase (not started): `validation/PHASE_3_ENGINEERING_WORKFLOW.md`
 
 See `CHANGELOG.md` for release notes.
 

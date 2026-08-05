@@ -8,17 +8,17 @@ Core contracts stay tool-agnostic. Integrations declare Available Operations and
 
 | Integration | Status | Notes |
 |---|---|---|
-| Cursor | Active (v0 validated) — **primary path** | Pipeline through Implement; matrix `005`–`010`. Consolidate here first. |
+| Cursor | Active — **v1.3 validated** | Runtime + Selection + Ops through Implement; matrix `005`–`010` |
 
-## Not immediate
+## Deferred
 
 | Integration | Status | Notes |
 |---|---|---|
-| Claude Code (or other) | Deferred | Candidate for later P6 proof **only after** personal workflow evidence shows a real gap (`../validation/PERSONAL_WORKFLOW.md`). |
+| Claude Code (or other) | Not started | Only after Phase 3 workflow evidence shows a real gap (`../validation/PHASE_3_ENGINEERING_WORKFLOW.md`) |
 
 ## Rules
 
-- See `../validation/CORE_MAINTENANCE.md` and `../validation/MILESTONE_ecosystem_phase.md`
+- See `../validation/CORE_MAINTENANCE.md` and `../validation/MILESTONE_v13_first_implementation_validation.md`
 - Do not grow Core to make an integration convenient
 - Prefer thin adapters over Core invention
 - **P9:** do not add a tool because it exists — only because practice demonstrated a gap

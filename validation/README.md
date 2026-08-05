@@ -24,10 +24,11 @@ Also see:
 
 - `MATRIX.md` — operation validation matrix
 - `CORE_MAINTENANCE.md` — Core constitutional maintenance mode
+- `MILESTONE_v13_first_implementation_validation.md` — **v1.3 release**
 - `MILESTONE_core_v12_first_implementation.md`
 - `MILESTONE_core_validated_read_and_transform.md`
 - `MILESTONE_ecosystem_phase.md`
-- `PERSONAL_WORKFLOW.md`
+- `PHASE_3_ENGINEERING_WORKFLOW.md` — next phase (not started)
 
 Rule:
 

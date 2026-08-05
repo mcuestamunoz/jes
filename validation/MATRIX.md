@@ -79,13 +79,15 @@ Implement criterion (held):
 
 > JES is an engineering system validated by incremental implementation.
 
+**Release:** JES **v1.3** — First Incremental Implementation Validation.  
 Core validated for knowledge and transformation Operations inside Cursor.  
-P6 remains theoretically stated until a second runtime is justified by workflow evidence and then reuses the same contracts.
+P6 / second integration remain later; **Phase 3** (daily engineer workflow) opens after this release.
 
 ## Milestones
 
+- `MILESTONE_v13_first_implementation_validation.md` — **v1.3 release**
 - `MILESTONE_core_v12_first_implementation.md`
 - `MILESTONE_core_validated_read_and_transform.md`
 - `MILESTONE_ecosystem_phase.md`
 - `CORE_MAINTENANCE.md`
-- `PERSONAL_WORKFLOW.md`
+- `PHASE_3_ENGINEERING_WORKFLOW.md` — next phase (not started)
