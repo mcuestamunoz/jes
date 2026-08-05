@@ -46,7 +46,8 @@ If no cell failed, there is no Core change.
 
 ## What continues outside Core
 
-- Fill remaining useful Operations when experience justifies them
-- Enrich integrations (Cursor consolidation, then others)
-- Accumulate matrix evidence
-- Empirically validate P6 (Replaceable Tools) via a second runtime
+- Finish a minimal useful Operation set when experience justifies it
+- Consolidate Cursor as the primary daily path
+- Discover personal workflow via field notes (`PERSONAL_WORKFLOW.md`)
+- Design multi-tool ecosystem only from demonstrated gaps (**P9**)
+- Empirically validate P6 later — via a second runtime — only if that gap is real

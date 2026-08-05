@@ -21,16 +21,21 @@ Matrix framing: architectural validation suite (Operation → validates Core / k
 Governance: fill the matrix; Core changes require a failed matrix cell.  
 After Implement without Core edits: Core validated for knowledge **and** transformation operations.
 
-### Phase shift (2026-08-05) — Ecosystem
+### Phase shift (2026-08-05) — Ecosystem (sequence corrected)
 
 **Positioning:** JES is an engineering system validated by incremental implementation.
 
 **Constitutional rule:** Core enters **maintenance mode** (`validation/CORE_MAINTENANCE.md`).  
 No anticipatory Core concepts; no aesthetic reshuffles; Core edits only on failed Operation contract or failed second-integration (tool-agnostic) proof.
 
-**Next strategic milestone:** second integration (**Claude Code**) to validate **P6 Replaceable Tools** empirically — not a larger Operation catalog.
+**Near-term order (not Claude Code yet):**
 
-Evidence: `validation/MILESTONE_ecosystem_phase.md`, `integrations/README.md`.
+```text
+Operations v1 (minimal) → Cursor consolidated → Personal workflow evidence → then maybe a second tool
+```
+
+P6 / Claude Code remain a **later** empirical gate. Adding a second tool now would skip role definition (**P9 Justified Complexity**).  
+Field notes: `validation/PERSONAL_WORKFLOW.md`. Sequence: `validation/MILESTONE_ecosystem_phase.md`.
 
 ### Added
 
@@ -54,7 +59,7 @@ Evidence: `validation/MILESTONE_ecosystem_phase.md`, `integrations/README.md`.
 
 - Core is in **maintenance mode** (`validation/CORE_MAINTENANCE.md`).
 - Do not modify Core unless a matrix cell fails or a second integration falsifies tool-agnosticism.
-- Next strategic focus: ecosystem — consolidate Cursor, then Claude Code / P6.
+- Near-term focus: minimal Operations, Cursor consolidation, personal workflow evidence — not a second tool by default.
 
 ## v1.1 — 2026-07-28
 

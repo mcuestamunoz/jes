@@ -8,24 +8,17 @@ Core contracts stay tool-agnostic. Integrations declare Available Operations and
 
 | Integration | Status | Notes |
 |---|---|---|
-| Cursor | Active (v0 validated) | Full pipeline through Implement; matrix `005`–`010` |
+| Cursor | Active (v0 validated) — **primary path** | Pipeline through Implement; matrix `005`–`010`. Consolidate here first. |
 
-## Strategic next
+## Not immediate
 
-| Integration | Purpose |
-|---|---|
-| Claude Code | Empirical validation of **P6 Replaceable Tools** |
-
-Success condition:
-
-> Claude Code reuses Cognition, State, Lifecycle, Workflow, Operations, and Operation Selection **without modifying Core**.
-
-Failure condition (the only honest Core input from this path):
-
-> A second runtime cannot honor the contract without Core changes → diagnose tool-agnostic defect vs integration defect.
+| Integration | Status | Notes |
+|---|---|---|
+| Claude Code (or other) | Deferred | Candidate for later P6 proof **only after** personal workflow evidence shows a real gap (`../validation/PERSONAL_WORKFLOW.md`). |
 
 ## Rules
 
-- See `../validation/CORE_MAINTENANCE.md`
+- See `../validation/CORE_MAINTENANCE.md` and `../validation/MILESTONE_ecosystem_phase.md`
 - Do not grow Core to make an integration convenient
 - Prefer thin adapters over Core invention
+- **P9:** do not add a tool because it exists — only because practice demonstrated a gap

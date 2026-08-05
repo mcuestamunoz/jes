@@ -48,23 +48,25 @@ Projects consume JES. They do not contain it.
 ## Current phase
 
 ```text
-Core (v1.2) — maintenance mode
-   ↓
-Cursor validation — done through Implement
-   ↓
-Ecosystem — consolidate Cursor, then second integration (Claude Code / P6)
+JES Core v1.2        ✅  maintenance mode
+Cursor Runtime       ✅
+Operations v1        ⏳  minimal useful set
+Cursor consolidated  ⏳
+Personal workflow    ⏳  field notes from real JARVIS work
+Second integration   ← later, only if evidence justifies it (P9)
 ```
 
 Constitutional Core rule: `validation/CORE_MAINTENANCE.md`  
 Operation evidence: `validation/MATRIX.md`  
-Ecosystem roadmap: `validation/MILESTONE_ecosystem_phase.md`
+Phase sequence: `validation/MILESTONE_ecosystem_phase.md`  
+Field notes: `validation/PERSONAL_WORKFLOW.md`
 
 ---
 
 ## Version
 
 Current: **v1.2** — Executable engineering core  
-Status: **Core in maintenance** — validated by incremental implementation; evolve only on failed matrix cells or failed second-integration proof
+Status: **Core in maintenance** — validated by incremental implementation; next work is Cursor consolidation and personal workflow discovery, not a second tool by default
 
 See `CHANGELOG.md` for release notes.
 

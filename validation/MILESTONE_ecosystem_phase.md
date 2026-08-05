@@ -1,4 +1,4 @@
-# Milestone — Ecosystem phase
+# Milestone — Ecosystem phase (corrected sequence)
 
 ## Phase change
 
@@ -11,42 +11,68 @@ v1.2  Executable Core
   ↓
 Validation by incremental implementation  ✅
   ↓
-Ecosystem of JES  ← current focus
+Ecosystem of JES — but not “install the next tool” yet
 ```
 
 Before: building **JES**.  
-Now: building the **ecosystem of JES** on a stable Core.
+Now: the Core is stable enough to serve real work. The next job is to **discover the engineer’s real workflow** with JES + Cursor.
 
-## Evidence that unlocked this phase
+## Logical distinction (do not collapse these)
 
-Six Cursor Operations without Core edits (`scenario_005`–`010`).  
-See `MILESTONE_core_validated_read_and_transform.md` and `CORE_MAINTENANCE.md`.
+| Idea | Meaning |
+|---|---|
+| **P6 as eventual proof** | A second integration can reuse Core unchanged |
+| **Claude Code now** | Installing a tool before knowing its role |
 
-## Next strategic milestone (not “more Operations”)
+Having a second integration is **not** the same as knowing how you want to work.  
+P6 remains a later empirical milestone — not the immediate next action.
+
+## Actual order
 
 ```text
-Claude Code (second integration)
+JES Core v1.2       ✅
+Cursor Runtime      ✅
+Operations v1       ⏳  minimal useful set
+Cursor consolidated ⏳
+Personal workflow   ⏳  evidence from real JARVIS work
+Claude Code         ← only after, if justified
 ```
 
-### Why
+## Immediate focus
 
-All current validation shares one conceptual runtime (Cursor).  
-**P6 — Replaceable Tools** becomes empirical only when another integration reuses, unchanged:
+1. Finish a **minimal useful** Operations set (`Refactor`; `Validate` if still needed for closure).
+2. **Consolidate Cursor** as the primary IDE path for JARVIS development.
+3. Work **only with Cursor + JES** for a sustained period.
+4. Record **field observations** (see `PERSONAL_WORKFLOW.md`).
+5. When 10–20 real notes exist, **design the ecosystem** from evidence.
+6. Only then decide whether Claude Code (or any second tool) adds a **new** capability — or merely duplicates Cursor.
 
-- Cognition
-- State
-- Lifecycle
-- Workflow
-- Operations
-- Operation Selection
+## Method (same rigor as Core validation)
 
-If that works without Core edits, P6 is validated in practice.
+```text
+Hypothesis: Cursor is sufficient for daily engineering with JES.
+     ↓
+Implementation: develop JARVIS for a sustained period on Cursor alone.
+     ↓
+Evidence: field notes where Cursor excelled / fell short / felt incomplete.
+     ↓
+Conclusion: add a second tool only if it solves a demonstrated gap (P9).
+```
 
-## Recommended sequence
+This is **P9 Justified Complexity** applied to the tool ecosystem: do not add a tool because it exists.
 
-1. Finish a **minimal useful** Operation set (`Refactor`; `Validate` if still needed)
-2. Consolidate Cursor materialization
-3. Implement a **second integration** (start: Claude Code)
-4. Measure what fails — that failure is the only honest Core input
+## Open questions (answer with practice, not speculation)
 
-Do **not** spend the energy of the project on a huge Operation catalog before P6 is tested.
+- What responsibilities belong to Cursor vs other assistants (e.g. ChatGPT)?
+- When should a second AI enter a cycle?
+- One AI at a time, or collaborating agents?
+- How is duplicate work across tools avoided?
+- What is the daily engineering flow under JES?
+
+Until those have evidence-backed answers, a second integration would be a tool test without a role definition.
+
+## P6 (later)
+
+When personal workflow is mature and a demonstrated gap exists, a second integration (candidate: Claude Code) can empirically validate **P6 Replaceable Tools** by reusing Cognition, State, Lifecycle, Workflow, Operations, and Selection without Core edits.
+
+That remains a **future** gate — not the current sprint.

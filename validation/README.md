@@ -27,6 +27,7 @@ Also see:
 - `MILESTONE_core_v12_first_implementation.md`
 - `MILESTONE_core_validated_read_and_transform.md`
 - `MILESTONE_ecosystem_phase.md`
+- `PERSONAL_WORKFLOW.md`
 
 Rule:
 

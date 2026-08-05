@@ -54,7 +54,7 @@ Protected:
 | Validate | Validate | Validation + Closure evidence | ⏳ | — |
 | Document | Communicate consequence | Knowledge persistence | ⏳ | — |
 
-## Fill strategy (ecosystem phase)
+## Fill strategy (near term)
 
 ```text
 Research  ✅
@@ -63,12 +63,13 @@ Explain   ✅
 Analyze   ✅
 Plan      ✅
 Implement ✅
-Refactor  ← minimal useful remainder (optional before P6)
+Refactor  ← minimal useful remainder
 Validate  ← if still needed for closure path
 ```
 
-Do **not** prioritize a huge Operation catalog.  
-Next strategic proof is a **second integration** (Claude Code) for empirical **P6**.
+Then: consolidate Cursor + gather personal workflow evidence (`PERSONAL_WORKFLOW.md`).  
+A second integration (e.g. Claude Code) is **deferred** until practice shows a demonstrated gap (**P9**).  
+P6 remains a later empirical proof — not the immediate next step.
 
 Implement criterion (held):
 
@@ -79,7 +80,7 @@ Implement criterion (held):
 > JES is an engineering system validated by incremental implementation.
 
 Core validated for knowledge and transformation Operations inside Cursor.  
-P6 remains theoretically stated until a second runtime reuses the same contracts.
+P6 remains theoretically stated until a second runtime is justified by workflow evidence and then reuses the same contracts.
 
 ## Milestones
 
@@ -87,3 +88,4 @@ P6 remains theoretically stated until a second runtime reuses the same contracts
 - `MILESTONE_core_validated_read_and_transform.md`
 - `MILESTONE_ecosystem_phase.md`
 - `CORE_MAINTENANCE.md`
+- `PERSONAL_WORKFLOW.md`
