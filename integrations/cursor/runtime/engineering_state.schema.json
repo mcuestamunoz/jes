@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jes-engineering-state-v1",
+  "title": "JES Engineering State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "cycle_intent",
+    "scope",
+    "execution_status",
+    "current_mode",
+    "movement_trigger",
+    "relevant_workflow_phases",
+    "applicable_rules",
+    "required_artifacts",
+    "open_questions",
+    "active_operation",
+    "authority_gates",
+    "coherence_checklist",
+    "updated_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "cycle_intent": {
+      "type": ["string", "null"]
+    },
+    "scope": {
+      "type": ["string", "null"]
+    },
+    "execution_status": {
+      "type": "string",
+      "enum": [
+        "idle",
+        "interpreting",
+        "active",
+        "blocked",
+        "awaiting_approval",
+        "closed",
+        "cancelled"
+      ]
+    },
+    "current_mode": {
+      "type": ["string", "null"],
+      "enum": [
+        null,
+        "Explore",
+        "Model",
+        "Design",
+        "Decide",
+        "Plan",
+        "Build",
+        "Validate",
+        "Evolve"
+      ]
+    },
+    "movement_trigger": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "evidence",
+                "decision",
+                "constraint",
+                "objective",
+                "clarification"
+              ]
+            },
+            "reason": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "relevant_workflow_phases": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "applicable_rules": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "required_artifacts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "active_operation": {
+      "type": ["string", "null"]
+    },
+    "authority_gates": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "coherence_checklist": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

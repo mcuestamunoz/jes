@@ -5,6 +5,7 @@ This document defines how Cursor translates an engineering request into JES-alig
 It sits between:
 
 - `FOUNDATION.md` (behavioral contract)
+- `RUNTIME.md` (how cycles/state/lifecycle live in Cursor)
 - `commands/` and `prompts/` (operational implementation)
 
 ## Purpose
@@ -82,21 +83,27 @@ Interpretation answers:
 
 ## 3) Engineering State
 
-Before execution, Cursor consolidates interpretation into an explicit engineering state.
+Before execution, Cursor consolidates interpretation into an explicit Engineering State.
 
-This state is the operational context object for the current cycle. It is used to preserve consistency across pause/continue/delegate/review transitions.
+Engineering State is a JES Core contract. Cursor does not define it; Cursor materializes it.
 
-### State Fields
+Canonical contract:
 
-- Current Intent
-- Current Scope
-- Relevant Workflow
-- Applicable Rules
-- Required Artifacts
-- Open Questions
-- Execution Status
+- `../../docs/02.6_ENGINEERING_STATE.md`
 
-If state fields are incomplete or contradictory, Cursor must stop and resolve gaps before execution.
+Lifecycle behavior:
+
+- `../../docs/02.7_ENGINEERING_STATE_LIFECYCLE.md`
+
+Related cognitive meaning:
+
+- `../../docs/02.5_ENGINEERING_COGNITION.md`
+
+Cursor uses Engineering State to preserve consistency across pause/continue/delegate/review transitions and to keep `current_mode` explicit during execution.
+
+Interpretation selects the initial `current_mode` from Cycle Intent and available context. `Explore` is not a rigid default.
+
+If state fields are incomplete or contradictory, Cursor must stop and resolve gaps before execution (`execution_status = blocked`).
 
 ## 4) Execution
 
@@ -179,7 +186,12 @@ Cursor must stop and ask before proceeding when any of the following is true:
 
 - `FOUNDATION.md` defines non-negotiable baseline behavior.
 - `OPERATING_MODEL.md` defines runtime translation from intent to action.
+- `RUNTIME.md` defines how JES cycles/state/lifecycle are materialized in Cursor.
+- `../../docs/02.5_ENGINEERING_COGNITION.md` defines Mode meaning and movement.
+- `../../docs/02.6_ENGINEERING_STATE.md` defines the live Engineering State contract.
+- `../../docs/02.7_ENGINEERING_STATE_LIFECYCLE.md` defines state create/evolve/persist/end behavior.
 - `../../docs/08_ENGINEERING_OPERATIONS.md` defines the shared JES operation set.
+- `../../docs/09_OPERATION_SELECTION.md` defines how the next available operation is selected.
 - `rules/` constrain specific Cursor behavior.
 - `prompts/` implement operation behavior (one-to-many mapping allowed).
 - `commands/` trigger operations.

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "cycle_intent": "Implement the approved Execution Plan for Operation Selection documentation updates in Cursor runtime.",
+  "scope": "integrations/cursor docs and validation scenarios only",
+  "execution_status": "active",
+  "current_mode": "Build",
+  "movement_trigger": {
+    "type": "objective",
+    "note": "Engineer requested Implement of approved plan"
+  },
+  "relevant_workflow_phases": [
+    "Intent",
+    "Design",
+    "Plan",
+    "Implementation"
+  ],
+  "applicable_rules": [],
+  "required_artifacts": [
+    "Execution Plan (.jes/artifacts/execution_plan.md)",
+    "Evidence (future Validate — not produced by Plan)",
+    "Change (.jes/artifacts/change.md)"
+  ],
+  "open_questions": [],
+  "active_operation": null,
+  "authority_gates": [],
+  "coherence_checklist": [
+    "code",
+    "tests",
+    "docs",
+    "contracts",
+    "workflow"
+  ],
+  "updated_at": "2026-08-05T17:18:16Z"
+}

@@ -69,8 +69,9 @@ Tool-specific Execution
 Where:
 
 - `Intent` is defined by the Engineer.
-- `Operation Selection` is performed by the integration operating model.
-- `Engineering Operation` is defined by JES core.
+- `Operation Selection` is a Core contract (`docs/09_OPERATION_SELECTION.md`).
+- Integrations declare Available Operations and invoke Selection.
+- `Engineering Operation` meaning is defined by JES core.
 - `Tool-specific Execution` is performed by the selected tool/runtime.
 
 ---

@@ -1,8 +1,11 @@
 # JES — Workflow
 
 > This document defines the standard engineering cycle of JES.  
-> A workflow does not define what to build; it defines how work is executed.  
-> Every phase has a responsible role and verifiable exit criteria.
+> A workflow does not define what to build; it defines how work is closed and validated.  
+> Every phase has a responsible role and verifiable exit criteria.  
+> How the engineer navigates intentions inside this cycle is defined in `02.5_ENGINEERING_COGNITION.md`.  
+> The live cycle representation used for progress and closure is defined in `02.6_ENGINEERING_STATE.md`.  
+> How that state is created, evolved, persisted, and ended is defined in `02.7_ENGINEERING_STATE_LIFECYCLE.md`.
 
 ---
 

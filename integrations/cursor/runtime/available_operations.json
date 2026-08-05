@@ -1,0 +1,12 @@
+{
+  "integration": "cursor",
+  "available_operations": [
+    "Research",
+    "Review",
+    "Explain",
+    "Analyze",
+    "Plan",
+    "Implement"
+  ],
+  "notes": "Implement is the first mutating op. It may change only what the Execution Plan authorizes within scope. Core stays frozen unless a matrix cell fails."
+}

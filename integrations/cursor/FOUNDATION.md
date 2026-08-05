@@ -7,6 +7,16 @@ The methodology is defined by JES.
 
 This document defines how Cursor must behave to implement that methodology.
 
+## Belonging
+
+Only JES Core concepts that remain meaningful without Cursor belong here as references.  
+Cursor-specific mechanics belong in this integration directory.
+
+> If a concept would still matter after every AI tool disappears, it belongs to JES Core.  
+> If it only makes sense because Cursor exists, it belongs here.
+
+---
+
 ## Authority
 
 - The human engineer has final authority over all technical and strategic decisions.
@@ -41,11 +51,15 @@ Core documents:
 - `SYSTEM_DEFINITION.md`
 - `docs/01_PRINCIPLES.md`
 - `docs/02_ARCHITECTURE.md`
+- `docs/02.5_ENGINEERING_COGNITION.md`
+- `docs/02.6_ENGINEERING_STATE.md`
+- `docs/02.7_ENGINEERING_STATE_LIFECYCLE.md`
 - `docs/03_WORKFLOW.md`
 - `docs/04_ROLES.md`
 - `docs/05_RULES.md`
 - `docs/06_INTEGRATIONS.md`
 - `docs/07_ECOSYSTEM.md`
 - `docs/08_ENGINEERING_OPERATIONS.md`
+- `docs/09_OPERATION_SELECTION.md`
 
 Repository documentation is the source of truth.
