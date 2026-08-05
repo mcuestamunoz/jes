@@ -1,7 +1,8 @@
 {
   "integration": "cursor",
   "available_operations": [
-    "Research"
+    "Research",
+    "Review"
   ],
-  "notes": "Paso 2 minimal catalog. Expand only after Selection + Research e2e works."
+  "notes": "Expand only to validate distinct JES modes. Each op must land without Core edits."
 }

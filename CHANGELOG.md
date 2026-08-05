@@ -7,6 +7,14 @@ All notable changes to the JARVIS Engineering System (JES) are documented in thi
 Executable engineering core: cognition, live state, lifecycle, and operation selection.  
 Core growth pauses unless real implementation exposes a limitation.
 
+### Implementation validation (2026-08-05)
+
+**Milestone: JES Core v1.2 — First Implementation Validation**
+
+Runtime + Operation Selection + Research completed the full live pipeline without modifying Core contracts (`02.5`–`02.7`, `08`, `09`).
+
+Evidence: `validation/MILESTONE_core_v12_first_implementation.md`, `validation/MATRIX.md`, scenarios 001–005.
+
 ### Added
 
 - Engineering Cognition (`docs/02.5_ENGINEERING_COGNITION.md`)

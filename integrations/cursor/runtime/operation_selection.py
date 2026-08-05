@@ -2,23 +2,24 @@
 """JES Cursor Operation Selection v0.
 
 Implements docs/09_OPERATION_SELECTION.md without modifying Core.
-Available Operations are declared by this integration (Research only).
+Available Operations are declared by this integration.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 STATE_PATH = ROOT / ".jes" / "state" / "engineering_state.json"
 AVAILABLE_PATH = Path(__file__).resolve().parent / "available_operations.json"
 
-# Minimal coherence table for v0.
-# Research gathers/structures context before solution decisions.
-RESEARCH_COHERENT_MODES = {"Explore", "Model"}
+# Disjoint coherence tables keep Selection deterministic (no ranking needed).
+COHERENT_MODES = {
+    "Research": {"Explore", "Model"},
+    "Review": {"Validate"},
+}
 
 
 def load_json(path: Path) -> dict:
@@ -54,43 +55,54 @@ def result(status: str, operation=None, candidates=None, reason: str = "") -> di
     }
 
 
-def is_research_coherent(state: dict) -> tuple[bool, str]:
+def live_state_ok(state: dict) -> tuple[bool, str]:
     status = state.get("execution_status")
-    mode = state.get("current_mode")
     intent = state.get("cycle_intent")
-
     if not intent or status in {None, "idle", "closed", "cancelled"}:
         return False, "No live Engineering State / Cycle Intent."
-
     if status == "awaiting_approval" and state.get("authority_gates"):
         return False, "Authority gates are pending; Selection will not invent work."
+    return True, ""
 
-    if mode not in RESEARCH_COHERENT_MODES:
-        return (
-            False,
-            "No available operation is coherent with the current Engineering State.",
-        )
 
-    # Research is compatible with open questions (they often motivate research).
-    return True, "Research is coherent with current mode and live Engineering State."
+def is_op_coherent(op: str, state: dict) -> bool:
+    modes = COHERENT_MODES.get(op, set())
+    return state.get("current_mode") in modes
 
 
 def select(state: dict, available: list[str], user_message: str | None = None) -> dict:
     """Functional selection: same inputs => same result. No ranking."""
-    _ = user_message  # reserved for later; v0 uses state + available ops
+    _ = user_message
 
-    if "Research" not in available:
+    ok, reason = live_state_ok(state)
+    if not ok:
+        return result("unavailable", reason=reason)
+
+    coherent = [op for op in available if is_op_coherent(op, state)]
+
+    if len(coherent) == 1:
+        op = coherent[0]
         return result(
-            "unavailable",
-            reason="Research is not in Available Operations for this integration.",
+            "selected",
+            operation=op,
+            candidates=coherent,
+            reason=f"{op} is coherent with current mode and live Engineering State.",
         )
 
-    # Only one available op in v0. Evaluate coherence against full state.
-    ok, reason = is_research_coherent(state)
-    if ok:
-        return result("selected", operation="Research", candidates=["Research"], reason=reason)
+    if len(coherent) > 1:
+        return result(
+            "ambiguous",
+            operation=None,
+            candidates=coherent,
+            reason="Multiple equivalent coherent operations; clarification required.",
+        )
 
-    return result("unavailable", operation=None, candidates=[], reason=reason)
+    return result(
+        "unavailable",
+        operation=None,
+        candidates=[],
+        reason="No available operation is coherent with the current Engineering State.",
+    )
 
 
 def cmd_select(args: argparse.Namespace) -> int:
@@ -98,7 +110,11 @@ def cmd_select(args: argparse.Namespace) -> int:
     available = available_operations()
     out = select(state, available, args.message)
     print(json.dumps(out, indent=2, ensure_ascii=False))
-    return 0 if out["status"] == "selected" else 2
+    if out["status"] == "selected":
+        return 0
+    if out["status"] == "ambiguous":
+        return 3
+    return 2
 
 
 def cmd_available(_: argparse.Namespace) -> int:
