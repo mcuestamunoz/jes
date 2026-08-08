@@ -68,8 +68,8 @@ Validate  ← if still needed for closure path
 ```
 
 Then: consolidate Cursor + gather personal workflow evidence (`PERSONAL_WORKFLOW.md`).  
-A second integration (e.g. Claude Code) is **deferred** until practice shows a demonstrated gap (**P9**).  
-P6 remains a later empirical proof — not the immediate next step.
+Claude Code has a **boundary defined** (`integrations/claude-code/`) as implementation-agent contracts — **not** Runtime validation.  
+Full second-integration / P6 proof remains later and must still be earned in practice (**P9**; see Field Note `2026-08-08`).
 
 Implement criterion (held):
 
