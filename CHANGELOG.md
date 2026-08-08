@@ -2,6 +2,19 @@
 
 All notable changes to the JARVIS Engineering System (JES) are documented in this file.
 
+## Unreleased
+
+### Added
+
+- Claude Code **boundary** (not Runtime validation): `integrations/claude-code/`
+  - Foundation (authority split: JES architect / Claude implementer / Engineer validator)
+  - Operating Model (Field Note → Implementation Contract → inspect → propose → wait → implement → test)
+  - Templates: project `CLAUDE.md`, per-task `IMPLEMENTATION_CONTRACT.md`
+- Integration note: filtered Implementation Contract in `docs/06_INTEGRATIONS.md`
+- Field Note `2026-08-08` documenting the gap that justifies the boundary (**P9**)
+
+Explicitly **not** claimed: P6 / second Runtime / matrix cells for Claude Code.
+
 ## v1.3 — 2026-08-05
 
 **JES v1.3 — First Incremental Implementation Validation**

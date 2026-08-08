@@ -226,6 +226,39 @@ It only consumes it.
 
 ---
 
+# Implementation Contract (filtered view)
+
+Some tools (notably Claude Code) are used as **implementation agents**, not as owners of methodology.
+
+For those tools, JES must not be dumped wholesale into the agent context.
+
+Instead, JES exposes a **filtered view**:
+
+```text
+JES decision (architect)
+        ↓
+Implementation Contract
+        ↓
+Project CLAUDE.md / tool operating manual
+        ↓
+Implementation agent
+```
+
+The Implementation Contract answers:
+
+> What may the agent decide locally, and what must it not decide architecturally?
+
+Templates and the Claude Code boundary live under `integrations/claude-code/`.
+
+This pattern:
+
+- keeps JES as architect;
+- keeps the agent as implementer;
+- avoids a mandatory deep pipeline between development tools;
+- does **not** by itself claim multi-integration portability (P6).
+
+---
+
 # Future Integrations
 
 Possible future integrations include:
