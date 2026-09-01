@@ -1,0 +1,85 @@
+---
+description: JES v1.3 — engineering cycle contract for Jarvis (Cursor)
+alwaysApply: true
+---
+
+# JES on Jarvis (Cursor)
+
+This project is governed by **JES v1.3** (JARVIS Engineering System).
+
+## Methodology location
+
+JES repo (read-only reference; do not duplicate Core here):
+
+```text
+~/Systems/JES
+```
+
+From this repo (Jarvis):
+
+```text
+../../Systems/JES
+```
+
+## Binding contracts (read before acting)
+
+| Document | Path (from Jarvis) |
+|---|---|
+| Foundation | `../../Systems/JES/integrations/cursor/FOUNDATION.md` |
+| Operating Model | `../../Systems/JES/integrations/cursor/OPERATING_MODEL.md` |
+| Runtime | `../../Systems/JES/integrations/cursor/RUNTIME.md` |
+
+Core (only when interpretation requires it; do not invent):
+
+- `../../Systems/JES/docs/02.5_ENGINEERING_COGNITION.md`
+- `../../Systems/JES/docs/02.6_ENGINEERING_STATE.md`
+- `../../Systems/JES/docs/02.7_ENGINEERING_STATE_LIFECYCLE.md`
+- `../../Systems/JES/docs/08_ENGINEERING_OPERATIONS.md`
+- `../../Systems/JES/docs/09_OPERATION_SELECTION.md`
+
+## Project cycle state (this repo)
+
+```text
+.jes/state/engineering_state.json   # live Engineering State
+.jes/artifacts/                     # operation outputs
+```
+
+## How you must behave
+
+1. **Intent, not Operations** — The Engineer never needs to say Research, Plan, Implement, Review. They speak goals and judgments; you translate via Interpretation → State → Selection → Operation.
+
+2. **Start or resume a cycle** — Opening Cursor is starting/resuming an engineering cycle, not asking for code. On first message in a new agent:
+   - If `.jes/state/` has a live cycle → **restore** and summarize (cycle, mode, status, open questions, next step).
+   - If none → treat the message as **Cycle Intent** (or ask for intent/outcome/scope if ambiguous).
+
+3. **State is yours to maintain** — Update `.jes/state/engineering_state.json` when the cycle evolves (mode movement, artifacts, open questions). State is **invisible by default**; show a compact HUD only when blocked, awaiting approval, or the Engineer asks.
+
+4. **Authority** — Engineer wins on decisions. Never close Decide autonomously. Use `awaiting_approval` + `authority_gates` when direction must be approved.
+
+5. **Scope** — Do not expand scope silently. Plan/Implement only within declared scope and Execution Plan when present.
+
+6. **Non-goals** — Do not redefine JES Core. Do not require structured templates as the primary interface; natural language is fine when intent is clear.
+
+## Session handoff (Engineer may paste)
+
+Restore:
+
+```text
+Trabajamos con JES v1.3. Restaura el ciclo desde .jes/ y resume dónde estamos. No implementes todavía.
+```
+
+New cycle:
+
+```text
+Cycle Intent: …
+Expected Outcome: …
+Scope: …
+```
+
+## Field evidence (optional)
+
+If friction appears (lost context, missing HUD, wrong operation), note it for JES Phase 3 in:
+
+```text
+~/Systems/JES/validation/FIELD_NOTES.md
+```

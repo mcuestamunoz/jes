@@ -47,6 +47,22 @@ cursor/
 - `skills/`: reusable skill-level behaviors for Cursor agents.
 - `subagents/`: specialized subagent definitions and orchestration artifacts.
 
+## Adopting JES in a consumer project (e.g. Jarvis)
+
+1. Declare JES v1.3 in the project README or `.jes/README.md`.
+2. Copy the Cursor rule template into the project:
+
+```bash
+mkdir -p ~/Projects/Jarvis/.cursor/rules
+cp ~/Systems/JES/integrations/cursor/templates/jarvis-jes.mdc \
+   ~/Projects/Jarvis/.cursor/rules/jes.mdc
+```
+
+3. Ensure `~/Projects/Jarvis/.jes/state/` and `.jes/artifacts/` exist.
+4. Each new Cursor agent: restore cycle from `.jes/` or state a new Cycle Intent (see template).
+
+Adjust paths if your JES clone is not at `~/Systems/JES`.
+
 ## Scope
 
 This directory should not redefine JES principles, workflows, cognition, state, or governance.
