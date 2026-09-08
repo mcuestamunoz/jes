@@ -2,6 +2,19 @@
 
 All notable changes to the JARVIS Engineering System (JES) are documented in this file.
 
+## Unreleased
+
+### Added
+
+- Codex **boundary** (not Runtime validation): `integrations/codex/`
+  - Foundation + Operating Model
+  - Templates: project `AGENTS.md`, per-task `IMPLEMENTATION_CONTRACT.md`
+  - Note: Codex auto-reads `AGENTS.md` (not `CODEX.md`)
+- Filtered Implementation Contract note in `docs/06_INTEGRATIONS.md`
+- Field Note `2026-09-08` (Claude session limits → Codex on a separate project)
+
+Explicitly **not** claimed: P6 / second Runtime / matrix cells for Codex.
+
 ## v1.3 — 2026-08-05
 
 **JES v1.3 — First Incremental Implementation Validation**
