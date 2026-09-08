@@ -226,6 +226,31 @@ It only consumes it.
 
 ---
 
+# Implementation Contract (filtered view)
+
+Some tools (Claude Code, Codex) are used as **implementation agents**, not as owners of methodology.
+
+Do not dump JES wholesale into the agent context. Expose a filtered view:
+
+```text
+JES decision (architect)
+        ↓
+Implementation Contract
+        ↓
+Project operating manual (CLAUDE.md / AGENTS.md)
+        ↓
+Implementation agent
+```
+
+Templates:
+
+- Codex: `integrations/codex/templates/` (`AGENTS.md` is the file Codex auto-reads)
+- Claude Code: `integrations/claude-code/templates/` when that boundary is merged
+
+This does **not** by itself claim multi-integration portability (P6).
+
+---
+
 # Future Integrations
 
 Possible future integrations include:
