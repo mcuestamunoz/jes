@@ -22,7 +22,8 @@ Shared Core references:
 
 ## Status
 
-**Scaffold (v0)** — contracts only. No runtime package, no deployed bot, no Available Operations catalog yet.
+**Contracts (v0)** in this directory.  
+**Runtime (manual):** sibling project `../../../jes-bot/` (Agent SDK; GitHub [`mcuestamunoz/jes-bot`](https://github.com/mcuestamunoz/jes-bot)) — orchestrator + Cloud Agents on the target project (today: Jarvis). Not inside Jarvis product tree. Not deployed; first launches are `agent-sdk dev` / `run` by hand.
 
 Field justification: `../../validation/FIELD_NOTES.md` (2026-11-01).
 
