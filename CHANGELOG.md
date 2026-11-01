@@ -2,6 +2,17 @@
 
 All notable changes to the JARVIS Engineering System (JES) are documented in this file.
 
+## Unreleased
+
+### Added
+
+- `integrations/agent_sdk/` scaffold (v0): `FOUNDATION.md`, `OPERATING_MODEL.md`, WO template
+- Field Note 2026-11-01 justifying orchestrator integration (P9); Cursor remains the validated IDE path
+
+### Notes
+
+- No Core contract changes. No runtime package yet. Project-owned `.jes/bot/orders/` is documented for consumers (e.g. Jarvis), not created under JES Core `.jes/`.
+
 ## v1.3 — 2026-08-05
 
 **JES v1.3 — First Incremental Implementation Validation**

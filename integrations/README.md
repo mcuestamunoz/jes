@@ -9,12 +9,14 @@ Core contracts stay tool-agnostic. Integrations declare Available Operations and
 | Integration | Status | Notes |
 |---|---|---|
 | Cursor | Active — **v1.3 validated** | Runtime + Selection + Ops through Implement; matrix `005`–`010` |
+| Agent SDK / Grok Bot | Scaffold (v0) | Orchestration + WO projection; contracts only — `agent_sdk/` |
 
 ## Deferred
 
 | Integration | Status | Notes |
 |---|---|---|
 | Claude Code (or other) | Not started | Only after Field Notes show a demonstrated gap (`../validation/FIELD_NOTES.md`) |
+| Agent SDK runtime / policies | Not started | After WO practice in a real project (Jarvis); no premature `bot/` package in Core |
 
 ## Rules
 

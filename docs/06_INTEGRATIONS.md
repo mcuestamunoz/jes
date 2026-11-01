@@ -230,7 +230,8 @@ It only consumes it.
 
 Possible future integrations include:
 
-- Cursor
+- Cursor (active — `integrations/cursor/`)
+- Agent SDK / Grok Bot (scaffold — `integrations/agent_sdk/`; orchestration + Work Orders)
 - Claude Code
 - ChatGPT
 - Codex
