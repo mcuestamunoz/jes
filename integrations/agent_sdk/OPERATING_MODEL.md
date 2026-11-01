@@ -100,8 +100,20 @@ Until this integration declares its own `available_operations` catalog, Selectio
 |---|---|
 | Research / Explain / Analyze | Orchestrator + repo read |
 | Plan | Orchestrator → `.jes/artifacts/execution_plan.md` |
-| Implement | Cursor Cloud Agent (or equivalent) on the project repo → branch / draft PR |
+| Implement | Cursor Cloud Agent (or equivalent) on the project repo → **`jes-bot/<WO-id>-<slug>`** + PR to `main` |
 | Review / Validate | Orchestrator or IDE review pass against plan + IC |
+
+### HARD RULE — Implement / git mutation
+
+See `rules/git_promotion_v0.md`. Non-negotiable:
+
+1. One branch per WO: `jes-bot/<WO-id>-<slug>` — never a shared `jes_bot` branch.
+2. Commits only on that branch; never on `main`.
+3. Deliverable is a PR toward `main`; **merge is Engineer ★ only**.
+4. No release tags (`v0.x.y`) and no deploy from the bot.
+5. Runtime hosts (e.g. bender) take the new version only via `git pull origin main` after merge.
+
+If the agent cannot honor this → `execution_status = blocked`.
 
 Execution preconditions (same spirit as Cursor):
 
@@ -109,7 +121,8 @@ Execution preconditions (same spirit as Cursor):
 - scope clear,
 - no autonomous architecture / strategy,
 - `authority_gates` empty or Engineer has cleared them,
-- required outputs identified.
+- required outputs identified,
+- git-mutating work names the `jes-bot/…` branch up front.
 
 ## 5) Output: JES Artifacts
 
@@ -122,11 +135,13 @@ Typical Implement arc:
 ```text
 execution_plan.md
     ↓
-change.md (+ in-scope mutation / PR)
+change.md (+ commits on jes-bot/<WO-id>-<slug> + PR → main)
     ↓
 evidence.md
     ↓
-Engineer ★ closure
+Engineer ★ review / merge / closure
+    ↓
+runtime: git pull origin main
 ```
 
 ## Decision gates

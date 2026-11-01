@@ -15,14 +15,25 @@ cycle_intent: ""
 scope: ""
 current_mode: Explore   # Core mode enum only
 active_operation: null  # Core operation enum or null
-authority_gates: []
+authority_gates:
+  - Engineer ★ review and merge of PR to main
+  - No bot merge / tag / deploy
 open_questions: []
 required_artifacts: []
 
 # --- dispatch / closure hints (not Core fields) ---
 suggested_operation: Plan   # hint for Selection; Selection may override
+git_branch: jes-bot/WO-001-<slug>   # HARD RULE: one branch per WO; see rules/git_promotion_v0.md
 done_when: ""
 out_of_scope: []
+allowed:
+  - Commits only on jes-bot/WO-001-<slug>
+  - Open / update PR targeting main
+forbidden:
+  - Push or merge to main
+  - Shared long-lived jes_bot branch
+  - Create tags v0.x.y
+  - Deploy / restart production
 notes: ""
 ```
 
@@ -46,4 +57,6 @@ notes: ""
 1. Read this WO + current `.jes/state/engineering_state.json`.
 2. If conflict → `execution_status = blocked`; ask Engineer.
 3. Else rewrite live Core fields from this WO and proceed via Operation Selection.
-4. On done: artifacts written; Core state `closed` / `idle`; mark WO `done`.
+4. If the WO mutates git: confirm `git_branch` matches `jes-bot/<id>-<slug>` and `allowed` / `forbidden` include the HARD RULE (`../rules/git_promotion_v0.md`).
+5. On done (bot side): artifacts + PR URL; Core state awaiting Engineer ★ merge — **do not merge**.
+6. After Engineer merge: runtime host may `git pull origin main`; then mark WO `done` / cycle `closed` per Lifecycle.

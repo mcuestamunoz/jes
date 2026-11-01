@@ -8,6 +8,7 @@ All notable changes to the JARVIS Engineering System (JES) are documented in thi
 
 - `integrations/agent_sdk/` scaffold (v0): `FOUNDATION.md`, `OPERATING_MODEL.md`, WO template
 - Field Note 2026-11-01 justifying orchestrator integration (P9); Cursor remains the validated IDE path
+- HARD RULE `integrations/agent_sdk/rules/git_promotion_v0.md`: one branch `jes-bot/<WO-id>-<slug>` → PR → Engineer ★ merge → `main`; bot never merges/tags/deploys
 
 ### Notes
 

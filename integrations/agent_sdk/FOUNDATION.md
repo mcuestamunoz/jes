@@ -25,6 +25,22 @@ Tool-specific mechanics belong in this integration directory.
 - Never merge, push to protected branches, deploy, or cross an `authority_gates` entry without explicit Engineer approval.
 - Ask for clarification when requirements are ambiguous.
 
+## HARD RULE — Git promotion
+
+Binding for every git-mutating Work Order. Full text: `rules/git_promotion_v0.md`.
+
+```text
+Bot → jes-bot/<WO-id>-<slug> → PR → Engineer ★ merge → main
+Runtime host (e.g. bender) → git pull origin main   = new version
+```
+
+| | |
+|---|---|
+| **Allowed** | Commits only on `jes-bot/<WO-id>-<slug>`; open PR to `main` |
+| **Forbidden** | Push/merge to `main`; fixed shared branch `jes_bot`; tags `v0.x.y`; deploy |
+
+One Work Order → one branch. Merge to `main` is the only path into the truth tip. Tags and ACCEPT are Engineer ★ only.
+
 ## Engineering Principles
 
 Before acting on a Work Order or Intent:

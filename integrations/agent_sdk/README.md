@@ -33,6 +33,8 @@ agent_sdk/
 ├── FOUNDATION.md
 ├── OPERATING_MODEL.md
 ├── README.md
+├── rules/
+│   └── git_promotion_v0.md    # HARD RULE — branch / PR / ★ merge
 └── templates/
     └── work_order.md
 ```
@@ -47,7 +49,8 @@ Deferred until practice demands them (P9):
 
 - `FOUNDATION.md`: baseline behavioral contract (authority, replaceability, SoT).
 - `OPERATING_MODEL.md`: Intent / Work Order → Selection → execution → artifacts.
-- `templates/work_order.md`: Work Order as a **projection** of Engineering State (not a parallel ontology).
+- `rules/git_promotion_v0.md`: **HARD RULE** — `jes-bot/<WO-id>-<slug>` → PR → Engineer ★ merge → `main`; bot never merges/tags/deploys.
+- `templates/work_order.md`: Work Order as a **projection** of Engineering State; includes `allowed` / `forbidden` for git.
 
 ## Split with Cursor
 
